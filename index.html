@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/index.css">
+    <style type="text/tailwindcss">
+        @theme {
+            --font-sans: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            --font-mono: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
+            /* TEXT VARIABLES */
+            --text-2xs: 0.625rem;
+            --spacing-8xl: 90rem;
+            --leading-9: 36px;
+            /* rem pls */
+            --leading-7: 28px;
+            --leading-8: 32px;
+            --leading-6: 24px;
+            --leading-4: 16px;
+            --leading-none: 1px;
+            --leading-5: 20px;
+            --tracking-tighter: -0.8px;
+            --leading-heading-none: 60px;
+            --tracking-tight: -0.4px;
+            /* BORDER RADIUS VARIABLES */
+            --radius-0: 0px;
+            --radius-xxs: 2px;
+            --radius-xs: 4px;
+            --radius-sm: 6px;
+            --radius: 8px;
+            --radius-base: 12px;
+            --radius-lg: 16px;
+            /* BORDER WIDTH VARIABLES */
+            --default-border-width: 1px;
+            /* TEXT COLORS VARIABLES */
+            /* main text color */
+            --color-body: var(--color-gray-600);
+            --color-body-subtle: var(--color-gray-500);
+            /* text heading colors */
+            --color-heading: var(--color-gray-900);
+            /* used for custom brand colors */
+            --color-fg-brand-subtle: var(--color-blue-200);
+            --color-fg-brand: var(--color-blue-700);
+            --color-fg-brand-strong: var(--color-blue-900);
+            /* used for status colors */
+            --color-fg-success: var(--color-emerald-700);
+            --color-fg-success-strong: var(--color-emerald-900);
+            --color-fg-danger: var(--color-rose-700);
+            --color-fg-danger-strong: var(--color-rose-900);
+            --color-fg-warning-subtle: var(--color-orange-600);
+            --color-fg-warning: var(--color-orange-900);
+            --color-fg-yellow: var(--color-yellow-400);
+            --color-fg-disabled: var(--color-gray-400);
+            --color-fg-purple: var(--color-purple-600);
+            --color-fg-cyan: var(--color-cyan-600);
+            --color-fg-indigo: var(--color-indigo-600);
+            --color-fg-pink: var(--color-pink-600);
+            --color-fg-lime: var(--color-lime-600);
+            /* BACKGROUND COLOR VARIABLES */
+            /* used for neutral colors */
+            --color-neutral-primary-soft: var(--color-white);
+            --color-neutral-primary: var(--color-white);
+            --color-neutral-primary-medium: var(--color-white);
+            --color-neutral-primary-strong: var(--color-white);
+            --color-neutral-secondary-soft: var(--color-gray-50);
+            --color-neutral-secondary: var(--color-gray-50);
+            --color-neutral-secondary-medium: var(--color-gray-50);
+            --color-neutral-secondary-strong: var(--color-gray-50);
+            --color-neutral-secondary-strongest: var(--color-gray-50);
+            --color-neutral-tertiary-soft: var(--color-gray-100);
+            --color-neutral-tertiary: var(--color-gray-100);
+            --color-neutral-tertiary-medium: var(--color-gray-100);
+            --color-neutral-quaternary: var(--color-gray-200);
+            --color-neutral-quaternary-medium: var(--color-gray-200);
+            --color-gray: var(--color-gray-300);
+            /* used for brand colors */
+            --color-brand-softer: var(--color-blue-50);
+            --color-brand-soft: var(--color-blue-100);
+            --color-brand: var(--color-blue-700);
+            --color-brand-medium: var(--color-blue-200);
+            --color-brand-strong: var(--color-blue-800);
+            /* used for status colors */
+            --color-success-soft: var(--color-emerald-50);
+            --color-success: var(--color-emerald-700);
+            --color-success-medium: var(--color-emerald-100);
+            --color-success-strong: var(--color-emerald-800);
+            --color-danger-soft: var(--color-rose-50);
+            --color-danger: var(--color-rose-700);
+            --color-danger-medium: var(--color-rose-100);
+            --color-danger-strong: var(--color-rose-800);
+            --color-warning-soft: var(--color-orange-50);
+            --color-warning: var(--color-orange-500);
+            --color-warning-medium: var(--color-orange-100);
+            --color-warning-strong: var(--color-orange-700);
+            --color-dark-soft: var(--color-gray-800);
+            --color-dark: var(--color-gray-800);
+            --color-dark-strong: var(--color-gray-900);
+            --color-disabled: var(--color-gray-100);
+            --color-purple: var(--color-purple-500);
+            --color-sky: var(--color-sky-500);
+            --color-teal: var(--color-teal-600);
+            --color-pink: var(--color-pink-600);
+            --color-cyan: var(--color-cyan-500);
+            --color-fuchsia: var(--color-fuchsia-600);
+            --color-indigo: var(--color-indigo-600);
+            --color-orange: var(--color-orange-400);
+            /* BORDER COLOR VARIABLES */
+            --color-buffer: var(--color-white);
+            --color-buffer-medium: var(--color-white);
+            --color-buffer-strong: var(--color-white);
+            --color-muted: var(--color-gray-50);
+            --color-light-subtle: var(--color-gray-100);
+            --color-light: var(--color-gray-100);
+            --color-light-medium: var(--color-gray-100);
+            --color-default-subtle: var(--color-gray-200);
+            --color-default: var(--color-gray-200);
+            --color-default-medium: var(--color-gray-200);
+            --color-default-strong: var(--color-gray-200);
+            /* used for status colors */
+            --color-success-subtle: var(--color-emerald-200);
+            --color-danger-subtle: var(--color-rose-200);
+            --color-warning-subtle: var(--color-orange-200);
+            --color-brand-subtle: var(--color-blue-200);
+            --color-brand-light: var(--color-blue-600);
+            --color-dark-subtle: var(--color-gray-800);
+            --color-dark-backdrop: var(--color-gray-950);
+            /* shiki variables */
+            --color-shiki-fg-brand: #79b8ff;
+            --color-shiki-fg-brand-subtle: #9ecbff;
+        }
+
+        .dark {
+            /* text color variables */
+            --color-body: var(--color-gray-400);
+            --color-body-subtle: var(--color-gray-400);
+            --color-heading: var(--color-white);
+            --color-fg-brand-subtle: var(--color-blue-200);
+            --color-fg-brand: var(--color-blue-500);
+            --color-fg-brand-strong: var(--color-blue-400);
+            --color-fg-success: var(--color-emerald-600);
+            --color-fg-success-strong: var(--color-emerald-300);
+            --color-fg-danger: var(--color-rose-500);
+            --color-fg-danger-strong: var(--color-rose-300);
+            --color-fg-warning-subtle: var(--color-orange-500);
+            --color-fg-warning: var(--color-orange-300);
+            --color-fg-yellow: var(--color-yellow-400);
+            --color-fg-disabled: var(--color-gray-600);
+            --color-fg-purple: var(--color-purple-500);
+            --color-fg-cyan: var(--color-cyan-500);
+            --color-fg-indigo: var(--color-indigo-500);
+            --color-fg-pink: var(--color-pink-500);
+            --color-fg-lime: var(--color-lime-500);
+            /* background color variables */
+            --color-neutral-primary-soft: var(--color-gray-900);
+            --color-neutral-primary: var(--color-gray-950);
+            --color-neutral-primary-medium: var(--color-gray-800);
+            --color-neutral-primary-strong: var(--color-gray-700);
+            --color-neutral-secondary-soft: var(--color-gray-900);
+            --color-neutral-secondary: var(--color-gray-950);
+            --color-neutral-secondary-medium: var(--color-gray-800);
+            --color-neutral-secondary-strong: var(--color-gray-700);
+            --color-neutral-secondary-strongest: var(--color-gray-600);
+            --color-neutral-tertiary-soft: var(--color-gray-900);
+            --color-neutral-tertiary: var(--color-gray-800);
+            --color-neutral-tertiary-medium: var(--color-gray-700);
+            --color-neutral-quaternary: var(--color-gray-700);
+            --color-neutral-quaternary-medium: var(--color-gray-600);
+            --color-gray: var(--color-gray-600);
+            --color-brand-softer: var(--color-blue-950);
+            --color-brand-soft: var(--color-blue-900);
+            --color-brand: var(--color-blue-600);
+            --color-brand-medium: var(--color-blue-900);
+            --color-brand-strong: var(--color-blue-700);
+            --color-success-soft: var(--color-emerald-950);
+            --color-success: var(--color-emerald-600);
+            --color-success-medium: var(--color-emerald-900);
+            --color-success-strong: var(--color-emerald-700);
+            --color-danger-soft: var(--color-rose-950);
+            --color-danger: var(--color-rose-700);
+            --color-danger-medium: var(--color-rose-900);
+            --color-danger-strong: var(--color-rose-800);
+            --color-warning-soft: var(--color-orange-950);
+            --color-warning: var(--color-orange-600);
+            --color-warning-medium: var(--color-orange-900);
+            --color-warning-strong: var(--color-orange-700);
+            --color-dark-soft: var(--color-gray-700);
+            --color-dark: var(--color-gray-800);
+            --color-dark-strong: var(--color-gray-700);
+            --color-disabled: var(--color-gray-800);
+            --color-purple: var(--color-purple-500);
+            --color-sky: var(--color-sky-500);
+            --color-teal: var(--color-teal-500);
+            --color-pink: var(--color-pink-500);
+            --color-cyan: var(--color-cyan-500);
+            --color-fuchsia: var(--color-fuchsia-500);
+            --color-indigo: var(--color-indigo-500);
+            --color-orange: var(--color-orange-400);
+            /* border color variables */
+            --color-buffer: var(--color-gray-950);
+            --color-buffer-medium: var(--color-gray-900);
+            --color-buffer-strong: var(--color-gray-800);
+            --color-muted: var(--color-gray-900);
+            --color-light-subtle: var(--color-gray-900);
+            --color-light: var(--color-gray-800);
+            --color-light-medium: var(--color-gray-700);
+            --color-default-subtle: var(--color-gray-900);
+            --color-default: var(--color-gray-800);
+            --color-default-medium: var(--color-gray-700);
+            --color-default-strong: var(--color-gray-600);
+            --color-success-subtle: var(--color-emerald-900);
+            --color-danger-subtle: var(--color-rose-900);
+            --color-warning-subtle: var(--color-orange-900);
+            --color-brand-subtle: var(--color-blue-900);
+            --color-brand-light: var(--color-blue-600);
+            --color-dark-subtle: var(--color-gray-700);
+            --color-dark-backdrop: var(--color-gray-950);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="fixed w-full z-20 top-0 start-0 border border-default border-b text-gray-500 bg-white shadow-sm">
+            <div class="max-w-screen-xl flex flex-wrap items-center mx-auto p-5">
+                <a href="#" class="flex items-center mr-[100px] space-x-3 rtl:space-x-reverse">
+                    <img src="/images/logo-light.svg" class="h-7" alt="Solid Logo" />
+                </a>
+                <div class="inline-flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <button data-collapse-toggle="navbar-cta" type="button"
+                        class="inline-flex items-center p-2 w-9 h-9 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+                        aria-controls="navbar-cta" aria-expanded="false">
+                        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                d="M5 7h14M5 12h14M5 17h14" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                    <ul
+                        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-heading bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Features</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Docs</a>
+                        </li>
+                        <li>
+                            <button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown"
+                                class="flex items-center justify-between w-full py-2 px-3 rounded font-medium text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
+                                Dropdown
+                                <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 9-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="multi-dropdow"
+                                class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+                                <ul class="p-2 text-sm text-body font-medium"
+                                    aria-labelledby="multiLevelDropdownButton">
+                                    <li>
+                                        <a href="#"
+                                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown"
+                                            data-dropdown-placement="right-start" type="button"
+                                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">
+                                            Pages
+                                            <svg class="h-4 w-4 ms-auto rtl:rotate-180" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                                viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                            </svg>
+                                        </button>
+                                        <div id="doubleDropdown"
+                                            class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+                                            <ul class="p-2 text-sm text-body font-medium"
+                                                aria-labelledby="dropdownMultiLevelButton">
+                                                <li>
+                                                    <a href="#"
+                                                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Blog
+                                                        Grid</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign
+                                                        In</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign
+                                                        Up</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Docs</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Support</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">404</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Earnings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign
+                                            out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Support</a>
+                        </li>
+                    </ul>
+                    <div class="flex ml-[150px] gap-8 items-center">
+                        <a href="#"
+                            class="text-gray-500 cursor-pointer items-center text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><svg
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="30"
+                                viewBox="0 0 50 50">
+                                <path
+                                    d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z">
+                                </path>
+                            </svg></a>
+                        <a href="#"
+                            class="text-gray-500 cursor-pointer items-center text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><img
+                                src="/images/icon-moon.svg" alt=""></a>
+                        <a href="#"
+                            class="text-gray-500 cursor-pointer items-center text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Sign
+                            in</a>
+                        <button type="button"
+                            class="text-white cursor-pointer bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-4xl text-sm px-6 py-2 focus:outline-none">Get
+                            started</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="flex px-20 gap-10 mx-auto items-center">
+            <div class="left pt-40 w-1/2 gap-[20px]">
+                <p class="font-medium mb-4">🔥 Solid - A Complete SaaS Starter Template for SaaS</p>
+                <h1 class="text-5xl font-bold mb-5 pr-20">Robust SaaS Boilerplate and Starter for Next.js</h1>
+                <p class="text-gray-500 pr-10 pb-10">Packed with all the key integrations you need for swift SaaS
+                    startup
+                    launch,
+                    including -
+                    Authentication, Database, Sanity Blog, Essential UI Components, Business Pages and More. Built-winth
+                    - Next.js, React 18 and TypeScript.</p>
+                <button class="text-white font-medium bg-black px-10 py-3 rounded-4xl cursor-pointer">Get
+                    Started</button>
+            </div>
+
+            <div class="right pt-40 w-1/2">
+                <img class="shadow-lg w-full" src="/images/hero-light.svg" alt="">
+            </div>
+        </section>
+
+        <section class="flex justify-between border border-none bg-gray-100 px-15 py-10 my-25 items-center">
+            <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out"
+                    src="/images/brand-light-01.svg" alt=""></a>
+            <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out"
+                    src="/images/brand-light-02.svg" alt=""></a>
+            <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out"
+                    src="/images/brand-light-03.svg" alt=""></a>
+            <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out"
+                    src="/images/brand-light-04.svg" alt=""></a>
+            <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out"
+                    src="/images/brand-light-05.svg" alt=""></a>
+            <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out"
+                    src="/images/brand-light-06.svg" alt=""></a>
+        </section>
+        <section class="text-center">
+            <h3 class="w-40 bg-blue-100 mb-5 mx-auto p-1 rounded-base font-normal">SOLID FEATURES</h3>
+            <h1 class="text-5xl font-bold mb-5">Core Features of Solid</h1>
+            <p class="w-xl mx-auto mb-5 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                convallis
+                tortor
+                eros.
+                Donec
+                vitae tortor
+                lacus. Phasellus aliquam ante in maximus.</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-5">
+                <div>
+                    <img class="h-auto max-w-full rounded-base"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+</body>
+
+</html>
