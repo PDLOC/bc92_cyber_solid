@@ -1,3 +1,72 @@
 body {
     font-family: "Inter", sans-serif;
 }
+
+.dark-hidden{
+  color:transparent;
+  position:static;
+}
+.dark-block{
+  position:absolute;
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  color:transparent;
+}
+.cta-img{
+  color:transparent;
+}
+.form-name    {
+  border-top: #fff;
+  border-left: #fff;
+  border-right: #fff;
+}
+.form-email{
+   border-top: #fff;
+  border-left: #fff;
+  border-right: #fff;
+}
+.form-subject{
+  border-top: #fff;
+  border-left: #fff;
+  border-right: #fff;
+}
+.form-phone{
+  border-top: #fff;
+  border-left: #fff;
+  border-right: #fff;
+}
+.form-text{
+   border-top: #fff;
+  border-left: #fff;
+  border-right: #fff;
+  resize: none;
+}
+.back-to-top {
+    position: fixed;
+    right: 54px;
+    bottom: 45px;
+    width: 50px;
+    height: 50px;
+    background-color: #006bff;
+    border-radius: 2px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease-in-out;
+}
+.back-to-top:hover {
+    background-color:#577be7;
+}
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top--fade-out { 
+  opacity: .5;
+}
