@@ -2,1152 +2,1283 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate
+  </title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital@0;1&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital@0;1&display=swap"
+    rel="stylesheet" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+    integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+    integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+  <link rel="stylesheet" href="styles/index.css" />
+  <style type="text/tailwindcss">
+    @theme {
+        --font-sans: "Inter", "ui-sans-serif", "system-ui", "-apple-system",
+          "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Arial",
+          "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol", "Noto Color Emoji";
+        --font-body: "Inter", "ui-sans-serif", "system-ui", "-apple-system",
+          "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Arial",
+          "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol", "Noto Color Emoji";
+        --font-mono: "ui-monospace", "SFMono-Regular", "Menlo", "Monaco",
+          "Consolas", "Liberation Mono", "Courier New", "monospace";
+        /* TEXT VARIABLES */
+        --text-2xs: 0.625rem;
+        --spacing-8xl: 90rem;
+        --leading-9: 36px;
+        /* rem pls */
+        --leading-7: 28px;
+        --leading-8: 32px;
+        --leading-6: 24px;
+        --leading-4: 16px;
+        --leading-none: 1px;
+        --leading-5: 20px;
+        --tracking-tighter: -0.8px;
+        --leading-heading-none: 60px;
+        --tracking-tight: -0.4px;
+        /* BORDER RADIUS VARIABLES */
+        --radius-0: 0px;
+        --radius-xxs: 2px;
+        --radius-xs: 4px;
+        --radius-sm: 6px;
+        --radius: 8px;
+        --radius-base: 12px;
+        --radius-lg: 16px;
+        /* BORDER WIDTH VARIABLES */
+        --default-border-width: 1px;
+        /* TEXT COLORS VARIABLES */
+        /* main text color */
+        --color-body: var(--color-gray-600);
+        --color-body-subtle: var(--color-gray-500);
+        /* text heading colors */
+        --color-heading: var(--color-gray-900);
+        /* used for custom brand colors */
+        --color-fg-brand-subtle: var(--color-blue-200);
+        --color-fg-brand: var(--color-blue-700);
+        --color-fg-brand-strong: var(--color-blue-900);
+        /* used for status colors */
+        --color-fg-success: var(--color-emerald-700);
+        --color-fg-success-strong: var(--color-emerald-900);
+        --color-fg-danger: var(--color-rose-700);
+        --color-fg-danger-strong: var(--color-rose-900);
+        --color-fg-warning-subtle: var(--color-orange-600);
+        --color-fg-warning: var(--color-orange-900);
+        --color-fg-yellow: var(--color-yellow-400);
+        --color-fg-disabled: var(--color-gray-400);
+        --color-fg-purple: var(--color-purple-600);
+        --color-fg-cyan: var(--color-cyan-600);
+        --color-fg-indigo: var(--color-indigo-600);
+        --color-fg-pink: var(--color-pink-600);
+        --color-fg-lime: var(--color-lime-600);
+        /* BACKGROUND COLOR VARIABLES */
+        /* used for neutral colors */
+        --color-neutral-primary-soft: var(--color-white);
+        --color-neutral-primary: var(--color-white);
+        --color-neutral-primary-medium: var(--color-white);
+        --color-neutral-primary-strong: var(--color-white);
+        --color-neutral-secondary-soft: var(--color-gray-50);
+        --color-neutral-secondary: var(--color-gray-50);
+        --color-neutral-secondary-medium: var(--color-gray-50);
+        --color-neutral-secondary-strong: var(--color-gray-50);
+        --color-neutral-secondary-strongest: var(--color-gray-50);
+        --color-neutral-tertiary-soft: var(--color-gray-100);
+        --color-neutral-tertiary: var(--color-gray-100);
+        --color-neutral-tertiary-medium: var(--color-gray-100);
+        --color-neutral-quaternary: var(--color-gray-200);
+        --color-neutral-quaternary-medium: var(--color-gray-200);
+        --color-gray: var(--color-gray-300);
+        /* used for brand colors */
+        --color-brand-softer: var(--color-blue-50);
+        --color-brand-soft: var(--color-blue-100);
+        --color-brand: var(--color-blue-700);
+        --color-brand-medium: var(--color-blue-200);
+        --color-brand-strong: var(--color-blue-800);
+        /* used for status colors */
+        --color-success-soft: var(--color-emerald-50);
+        --color-success: var(--color-emerald-700);
+        --color-success-medium: var(--color-emerald-100);
+        --color-success-strong: var(--color-emerald-800);
+        --color-danger-soft: var(--color-rose-50);
+        --color-danger: var(--color-rose-700);
+        --color-danger-medium: var(--color-rose-100);
+        --color-danger-strong: var(--color-rose-800);
+        --color-warning-soft: var(--color-orange-50);
+        --color-warning: var(--color-orange-500);
+        --color-warning-medium: var(--color-orange-100);
+        --color-warning-strong: var(--color-orange-700);
+        --color-dark-soft: var(--color-gray-800);
+        --color-dark: var(--color-gray-800);
+        --color-dark-strong: var(--color-gray-900);
+        --color-disabled: var(--color-gray-100);
+        --color-purple: var(--color-purple-500);
+        --color-sky: var(--color-sky-500);
+        --color-teal: var(--color-teal-600);
+        --color-pink: var(--color-pink-600);
+        --color-cyan: var(--color-cyan-500);
+        --color-fuchsia: var(--color-fuchsia-600);
+        --color-indigo: var(--color-indigo-600);
+        --color-orange: var(--color-orange-400);
+        /* BORDER COLOR VARIABLES */
+        --color-buffer: var(--color-white);
+        --color-buffer-medium: var(--color-white);
+        --color-buffer-strong: var(--color-white);
+        --color-muted: var(--color-gray-50);
+        --color-light-subtle: var(--color-gray-100);
+        --color-light: var(--color-gray-100);
+        --color-light-medium: var(--color-gray-100);
+        --color-default-subtle: var(--color-gray-200);
+        --color-default: var(--color-gray-200);
+        --color-default-medium: var(--color-gray-200);
+        --color-default-strong: var(--color-gray-200);
+        /* used for status colors */
+        --color-success-subtle: var(--color-emerald-200);
+        --color-danger-subtle: var(--color-rose-200);
+        --color-warning-subtle: var(--color-orange-200);
+        --color-brand-subtle: var(--color-blue-200);
+        --color-brand-light: var(--color-blue-600);
+        --color-dark-subtle: var(--color-gray-800);
+        --color-dark-backdrop: var(--color-gray-950);
+        /* shiki variables */
+        --color-shiki-fg-brand: #79b8ff;
+        --color-shiki-fg-brand-subtle: #9ecbff;
+      }
 
-
-
-    <link rel="stylesheet" href="styles/index.css">
-    <style type="text/tailwindcss">
-        @theme {
-            --font-sans: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-            --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-            --font-mono: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
-            /* TEXT VARIABLES */
-            --text-2xs: 0.625rem;
-            --spacing-8xl: 90rem;
-            --leading-9: 36px;
-            /* rem pls */
-            --leading-7: 28px;
-            --leading-8: 32px;
-            --leading-6: 24px;
-            --leading-4: 16px;
-            --leading-none: 1px;
-            --leading-5: 20px;
-            --tracking-tighter: -0.8px;
-            --leading-heading-none: 60px;
-            --tracking-tight: -0.4px;
-            /* BORDER RADIUS VARIABLES */
-            --radius-0: 0px;
-            --radius-xxs: 2px;
-            --radius-xs: 4px;
-            --radius-sm: 6px;
-            --radius: 8px;
-            --radius-base: 12px;
-            --radius-lg: 16px;
-            /* BORDER WIDTH VARIABLES */
-            --default-border-width: 1px;
-            /* TEXT COLORS VARIABLES */
-            /* main text color */
-            --color-body: var(--color-gray-600);
-            --color-body-subtle: var(--color-gray-500);
-            /* text heading colors */
-            --color-heading: var(--color-gray-900);
-            /* used for custom brand colors */
-            --color-fg-brand-subtle: var(--color-blue-200);
-            --color-fg-brand: var(--color-blue-700);
-            --color-fg-brand-strong: var(--color-blue-900);
-            /* used for status colors */
-            --color-fg-success: var(--color-emerald-700);
-            --color-fg-success-strong: var(--color-emerald-900);
-            --color-fg-danger: var(--color-rose-700);
-            --color-fg-danger-strong: var(--color-rose-900);
-            --color-fg-warning-subtle: var(--color-orange-600);
-            --color-fg-warning: var(--color-orange-900);
-            --color-fg-yellow: var(--color-yellow-400);
-            --color-fg-disabled: var(--color-gray-400);
-            --color-fg-purple: var(--color-purple-600);
-            --color-fg-cyan: var(--color-cyan-600);
-            --color-fg-indigo: var(--color-indigo-600);
-            --color-fg-pink: var(--color-pink-600);
-            --color-fg-lime: var(--color-lime-600);
-            /* BACKGROUND COLOR VARIABLES */
-            /* used for neutral colors */
-            --color-neutral-primary-soft: var(--color-white);
-            --color-neutral-primary: var(--color-white);
-            --color-neutral-primary-medium: var(--color-white);
-            --color-neutral-primary-strong: var(--color-white);
-            --color-neutral-secondary-soft: var(--color-gray-50);
-            --color-neutral-secondary: var(--color-gray-50);
-            --color-neutral-secondary-medium: var(--color-gray-50);
-            --color-neutral-secondary-strong: var(--color-gray-50);
-            --color-neutral-secondary-strongest: var(--color-gray-50);
-            --color-neutral-tertiary-soft: var(--color-gray-100);
-            --color-neutral-tertiary: var(--color-gray-100);
-            --color-neutral-tertiary-medium: var(--color-gray-100);
-            --color-neutral-quaternary: var(--color-gray-200);
-            --color-neutral-quaternary-medium: var(--color-gray-200);
-            --color-gray: var(--color-gray-300);
-            /* used for brand colors */
-            --color-brand-softer: var(--color-blue-50);
-            --color-brand-soft: var(--color-blue-100);
-            --color-brand: var(--color-blue-700);
-            --color-brand-medium: var(--color-blue-200);
-            --color-brand-strong: var(--color-blue-800);
-            /* used for status colors */
-            --color-success-soft: var(--color-emerald-50);
-            --color-success: var(--color-emerald-700);
-            --color-success-medium: var(--color-emerald-100);
-            --color-success-strong: var(--color-emerald-800);
-            --color-danger-soft: var(--color-rose-50);
-            --color-danger: var(--color-rose-700);
-            --color-danger-medium: var(--color-rose-100);
-            --color-danger-strong: var(--color-rose-800);
-            --color-warning-soft: var(--color-orange-50);
-            --color-warning: var(--color-orange-500);
-            --color-warning-medium: var(--color-orange-100);
-            --color-warning-strong: var(--color-orange-700);
-            --color-dark-soft: var(--color-gray-800);
-            --color-dark: var(--color-gray-800);
-            --color-dark-strong: var(--color-gray-900);
-            --color-disabled: var(--color-gray-100);
-            --color-purple: var(--color-purple-500);
-            --color-sky: var(--color-sky-500);
-            --color-teal: var(--color-teal-600);
-            --color-pink: var(--color-pink-600);
-            --color-cyan: var(--color-cyan-500);
-            --color-fuchsia: var(--color-fuchsia-600);
-            --color-indigo: var(--color-indigo-600);
-            --color-orange: var(--color-orange-400);
-            /* BORDER COLOR VARIABLES */
-            --color-buffer: var(--color-white);
-            --color-buffer-medium: var(--color-white);
-            --color-buffer-strong: var(--color-white);
-            --color-muted: var(--color-gray-50);
-            --color-light-subtle: var(--color-gray-100);
-            --color-light: var(--color-gray-100);
-            --color-light-medium: var(--color-gray-100);
-            --color-default-subtle: var(--color-gray-200);
-            --color-default: var(--color-gray-200);
-            --color-default-medium: var(--color-gray-200);
-            --color-default-strong: var(--color-gray-200);
-            /* used for status colors */
-            --color-success-subtle: var(--color-emerald-200);
-            --color-danger-subtle: var(--color-rose-200);
-            --color-warning-subtle: var(--color-orange-200);
-            --color-brand-subtle: var(--color-blue-200);
-            --color-brand-light: var(--color-blue-600);
-            --color-dark-subtle: var(--color-gray-800);
-            --color-dark-backdrop: var(--color-gray-950);
-            /* shiki variables */
-            --color-shiki-fg-brand: #79b8ff;
-            --color-shiki-fg-brand-subtle: #9ecbff;
-        }
-
-        .dark {
-            /* text color variables */
-            --color-body: var(--color-gray-400);
-            --color-body-subtle: var(--color-gray-400);
-            --color-heading: var(--color-white);
-            --color-fg-brand-subtle: var(--color-blue-200);
-            --color-fg-brand: var(--color-blue-500);
-            --color-fg-brand-strong: var(--color-blue-400);
-            --color-fg-success: var(--color-emerald-600);
-            --color-fg-success-strong: var(--color-emerald-300);
-            --color-fg-danger: var(--color-rose-500);
-            --color-fg-danger-strong: var(--color-rose-300);
-            --color-fg-warning-subtle: var(--color-orange-500);
-            --color-fg-warning: var(--color-orange-300);
-            --color-fg-yellow: var(--color-yellow-400);
-            --color-fg-disabled: var(--color-gray-600);
-            --color-fg-purple: var(--color-purple-500);
-            --color-fg-cyan: var(--color-cyan-500);
-            --color-fg-indigo: var(--color-indigo-500);
-            --color-fg-pink: var(--color-pink-500);
-            --color-fg-lime: var(--color-lime-500);
-            /* background color variables */
-            --color-neutral-primary-soft: var(--color-gray-900);
-            --color-neutral-primary: var(--color-gray-950);
-            --color-neutral-primary-medium: var(--color-gray-800);
-            --color-neutral-primary-strong: var(--color-gray-700);
-            --color-neutral-secondary-soft: var(--color-gray-900);
-            --color-neutral-secondary: var(--color-gray-950);
-            --color-neutral-secondary-medium: var(--color-gray-800);
-            --color-neutral-secondary-strong: var(--color-gray-700);
-            --color-neutral-secondary-strongest: var(--color-gray-600);
-            --color-neutral-tertiary-soft: var(--color-gray-900);
-            --color-neutral-tertiary: var(--color-gray-800);
-            --color-neutral-tertiary-medium: var(--color-gray-700);
-            --color-neutral-quaternary: var(--color-gray-700);
-            --color-neutral-quaternary-medium: var(--color-gray-600);
-            --color-gray: var(--color-gray-600);
-            --color-brand-softer: var(--color-blue-950);
-            --color-brand-soft: var(--color-blue-900);
-            --color-brand: var(--color-blue-600);
-            --color-brand-medium: var(--color-blue-900);
-            --color-brand-strong: var(--color-blue-700);
-            --color-success-soft: var(--color-emerald-950);
-            --color-success: var(--color-emerald-600);
-            --color-success-medium: var(--color-emerald-900);
-            --color-success-strong: var(--color-emerald-700);
-            --color-danger-soft: var(--color-rose-950);
-            --color-danger: var(--color-rose-700);
-            --color-danger-medium: var(--color-rose-900);
-            --color-danger-strong: var(--color-rose-800);
-            --color-warning-soft: var(--color-orange-950);
-            --color-warning: var(--color-orange-600);
-            --color-warning-medium: var(--color-orange-900);
-            --color-warning-strong: var(--color-orange-700);
-            --color-dark-soft: var(--color-gray-700);
-            --color-dark: var(--color-gray-800);
-            --color-dark-strong: var(--color-gray-700);
-            --color-disabled: var(--color-gray-800);
-            --color-purple: var(--color-purple-500);
-            --color-sky: var(--color-sky-500);
-            --color-teal: var(--color-teal-500);
-            --color-pink: var(--color-pink-500);
-            --color-cyan: var(--color-cyan-500);
-            --color-fuchsia: var(--color-fuchsia-500);
-            --color-indigo: var(--color-indigo-500);
-            --color-orange: var(--color-orange-400);
-            /* border color variables */
-            --color-buffer: var(--color-gray-950);
-            --color-buffer-medium: var(--color-gray-900);
-            --color-buffer-strong: var(--color-gray-800);
-            --color-muted: var(--color-gray-900);
-            --color-light-subtle: var(--color-gray-900);
-            --color-light: var(--color-gray-800);
-            --color-light-medium: var(--color-gray-700);
-            --color-default-subtle: var(--color-gray-900);
-            --color-default: var(--color-gray-800);
-            --color-default-medium: var(--color-gray-700);
-            --color-default-strong: var(--color-gray-600);
-            --color-success-subtle: var(--color-emerald-900);
-            --color-danger-subtle: var(--color-rose-900);
-            --color-warning-subtle: var(--color-orange-900);
-            --color-brand-subtle: var(--color-blue-900);
-            --color-brand-light: var(--color-blue-600);
-            --color-dark-subtle: var(--color-gray-700);
-            --color-dark-backdrop: var(--color-gray-950);
-        }
+      .dark {
+        /* text color variables */
+        --color-body: var(--color-gray-400);
+        --color-body-subtle: var(--color-gray-400);
+        --color-heading: var(--color-white);
+        --color-fg-brand-subtle: var(--color-blue-200);
+        --color-fg-brand: var(--color-blue-500);
+        --color-fg-brand-strong: var(--color-blue-400);
+        --color-fg-success: var(--color-emerald-600);
+        --color-fg-success-strong: var(--color-emerald-300);
+        --color-fg-danger: var(--color-rose-500);
+        --color-fg-danger-strong: var(--color-rose-300);
+        --color-fg-warning-subtle: var(--color-orange-500);
+        --color-fg-warning: var(--color-orange-300);
+        --color-fg-yellow: var(--color-yellow-400);
+        --color-fg-disabled: var(--color-gray-600);
+        --color-fg-purple: var(--color-purple-500);
+        --color-fg-cyan: var(--color-cyan-500);
+        --color-fg-indigo: var(--color-indigo-500);
+        --color-fg-pink: var(--color-pink-500);
+        --color-fg-lime: var(--color-lime-500);
+        /* background color variables */
+        --color-neutral-primary-soft: var(--color-gray-900);
+        --color-neutral-primary: var(--color-gray-950);
+        --color-neutral-primary-medium: var(--color-gray-800);
+        --color-neutral-primary-strong: var(--color-gray-700);
+        --color-neutral-secondary-soft: var(--color-gray-900);
+        --color-neutral-secondary: var(--color-gray-950);
+        --color-neutral-secondary-medium: var(--color-gray-800);
+        --color-neutral-secondary-strong: var(--color-gray-700);
+        --color-neutral-secondary-strongest: var(--color-gray-600);
+        --color-neutral-tertiary-soft: var(--color-gray-900);
+        --color-neutral-tertiary: var(--color-gray-800);
+        --color-neutral-tertiary-medium: var(--color-gray-700);
+        --color-neutral-quaternary: var(--color-gray-700);
+        --color-neutral-quaternary-medium: var(--color-gray-600);
+        --color-gray: var(--color-gray-600);
+        --color-brand-softer: var(--color-blue-950);
+        --color-brand-soft: var(--color-blue-900);
+        --color-brand: var(--color-blue-600);
+        --color-brand-medium: var(--color-blue-900);
+        --color-brand-strong: var(--color-blue-700);
+        --color-success-soft: var(--color-emerald-950);
+        --color-success: var(--color-emerald-600);
+        --color-success-medium: var(--color-emerald-900);
+        --color-success-strong: var(--color-emerald-700);
+        --color-danger-soft: var(--color-rose-950);
+        --color-danger: var(--color-rose-700);
+        --color-danger-medium: var(--color-rose-900);
+        --color-danger-strong: var(--color-rose-800);
+        --color-warning-soft: var(--color-orange-950);
+        --color-warning: var(--color-orange-600);
+        --color-warning-medium: var(--color-orange-900);
+        --color-warning-strong: var(--color-orange-700);
+        --color-dark-soft: var(--color-gray-700);
+        --color-dark: var(--color-gray-800);
+        --color-dark-strong: var(--color-gray-700);
+        --color-disabled: var(--color-gray-800);
+        --color-purple: var(--color-purple-500);
+        --color-sky: var(--color-sky-500);
+        --color-teal: var(--color-teal-500);
+        --color-pink: var(--color-pink-500);
+        --color-cyan: var(--color-cyan-500);
+        --color-fuchsia: var(--color-fuchsia-500);
+        --color-indigo: var(--color-indigo-500);
+        --color-orange: var(--color-orange-400);
+        /* border color variables */
+        --color-buffer: var(--color-gray-950);
+        --color-buffer-medium: var(--color-gray-900);
+        --color-buffer-strong: var(--color-gray-800);
+        --color-muted: var(--color-gray-900);
+        --color-light-subtle: var(--color-gray-900);
+        --color-light: var(--color-gray-800);
+        --color-light-medium: var(--color-gray-700);
+        --color-default-subtle: var(--color-gray-900);
+        --color-default: var(--color-gray-800);
+        --color-default-medium: var(--color-gray-700);
+        --color-default-strong: var(--color-gray-600);
+        --color-success-subtle: var(--color-emerald-900);
+        --color-danger-subtle: var(--color-rose-900);
+        --color-warning-subtle: var(--color-orange-900);
+        --color-brand-subtle: var(--color-blue-900);
+        --color-brand-light: var(--color-blue-600);
+        --color-dark-subtle: var(--color-gray-700);
+        --color-dark-backdrop: var(--color-gray-950);
+      }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav class="fixed w-full z-20 top-0 start-0 border border-default border-b text-gray-500 bg-white shadow-sm">
-            <div class="max-w-screen-xl flex flex-wrap items-center mx-auto p-5">
-                <a href="#" class="flex items-center mr-[100px] space-x-3 rtl:space-x-reverse">
-                    <img src="/images/logo-light.svg" class="h-7" alt="Solid Logo" />
-                </a>
-                <div class="inline-flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <button data-collapse-toggle="navbar-cta" type="button"
-                        class="inline-flex items-center p-2 w-9 h-9 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
-                        aria-controls="navbar-cta" aria-expanded="false">
-                        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
-                                d="M5 7h14M5 12h14M5 17h14" />
-                        </svg>
+  <header>
+    <nav class="fixed w-full z-20 top-0 start-0 border border-default border-b text-gray-500 bg-white shadow-sm">
+      <div class="max-w-screen-xl flex flex-wrap items-center mx-auto p-5">
+        <a href="#" class="flex items-center mr-[100px] space-x-3 rtl:space-x-reverse">
+          <img src="/images/logo-light.svg" class="h-7" alt="Solid Logo" />
+        </a>
+        <div class="inline-flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button data-collapse-toggle="navbar-cta" type="button"
+            class="inline-flex items-center p-2 w-9 h-9 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+            aria-controls="navbar-cta" aria-expanded="false">
+            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" />
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+            <li>
+              <a href="#"
+                class="block py-2 px-3 text-heading bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Features</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Blog
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Docs</a>
+            </li>
+            <li>
+              <button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown"
+                class="flex items-center justify-between w-full py-2 px-3 rounded font-medium text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
+                Dropdown
+                <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div id="multi-dropdow"
+                class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+                <ul class="p-2 text-sm text-body font-medium" aria-labelledby="multiLevelDropdownButton">
+                  <li>
+                    <a href="#"
+                      class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Dashboard</a>
+                  </li>
+                  <li>
+                    <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown"
+                      data-dropdown-placement="right-start" type="button"
+                      class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">
+                      Pages
+                      <svg class="h-4 w-4 ms-auto rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="m9 5 7 7-7 7" />
+                      </svg>
                     </button>
-                </div>
-                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-                    <ul
-                        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+                    <div id="doubleDropdown"
+                      class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+                      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMultiLevelButton">
                         <li>
-                            <a href="#"
-                                class="block py-2 px-3 text-heading bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
-                                aria-current="page">Home</a>
+                          <a href="#"
+                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Blog
+                            Grid</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Features</a>
+                          <a href="#"
+                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign
+                            In</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Blog
-                            </a>
+                          <a href="#"
+                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign
+                            Up</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Docs</a>
+                          <a href="#"
+                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Docs</a>
                         </li>
                         <li>
-                            <button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown"
-                                class="flex items-center justify-between w-full py-2 px-3 rounded font-medium text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
-                                Dropdown
-                                <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m19 9-7 7-7-7" />
-                                </svg>
-                            </button>
-                            <!-- Dropdown menu -->
-                            <div id="multi-dropdow"
-                                class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
-                                <ul class="p-2 text-sm text-body font-medium"
-                                    aria-labelledby="multiLevelDropdownButton">
-                                    <li>
-                                        <a href="#"
-                                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Dashboard</a>
-                                    </li>
-                                    <li>
-                                        <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown"
-                                            data-dropdown-placement="right-start" type="button"
-                                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">
-                                            Pages
-                                            <svg class="h-4 w-4 ms-auto rtl:rotate-180" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                                viewBox="0 0 24 24">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
-                                            </svg>
-                                        </button>
-                                        <div id="doubleDropdown"
-                                            class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
-                                            <ul class="p-2 text-sm text-body font-medium"
-                                                aria-labelledby="dropdownMultiLevelButton">
-                                                <li>
-                                                    <a href="#"
-                                                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Blog
-                                                        Grid</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign
-                                                        In</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign
-                                                        Up</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Docs</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Support</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">404</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Earnings</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign
-                                            out</a>
-                                    </li>
-                                </ul>
-                            </div>
+                          <a href="#"
+                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Support</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Support</a>
+                          <a href="#"
+                            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">404</a>
                         </li>
-                    </ul>
-                    <div class="flex ml-[150px] gap-8 items-center">
-                        <a href="#"
-                            class="text-gray-500 cursor-pointer items-center text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><svg
-                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="30"
-                                viewBox="0 0 50 50">
-                                <path
-                                    d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z">
-                                </path>
-                            </svg></a>
-                        <a href="#"
-                            class="text-gray-500 cursor-pointer items-center text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><img
-                                src="/images/icon-moon.svg" alt=""></a>
-                        <a href="#"
-                            class="text-gray-500 cursor-pointer items-center text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Sign
-                            in</a>
-                        <button type="button"
-                            class="text-white cursor-pointer bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-4xl text-sm px-6 py-2 focus:outline-none">Get
-                            started</button>
+                      </ul>
                     </div>
-                </div>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Earnings</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign
+                      out</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Support</a>
+            </li>
+          </ul>
+          <div class="flex ml-[150px] gap-8 items-center">
+            <a href="#"
+              class="text-gray-500 cursor-pointer items-center text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><svg
+                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="30" viewBox="0 0 50 50">
+                <path
+                  d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z">
+                </path>
+              </svg></a>
+            <a href="#"
+              class="text-gray-500 cursor-pointer items-center text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><img
+                src="/images/icon-moon.svg" alt="" /></a>
+            <a href="#"
+              class="text-gray-500 cursor-pointer items-center text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Sign
+              in</a>
+            <button type="button"
+              class="text-white cursor-pointer bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-4xl text-sm px-6 py-2 focus:outline-none">
+              Get started
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="flex px-20 gap-10 mx-auto items-center">
+      <div class="left pt-40 w-1/2 gap-[20px]">
+        <p class="font-medium mb-4">
+          🔥 Solid - A Complete SaaS Starter Template for SaaS
+        </p>
+        <h1 class="text-5xl font-bold mb-5 pr-20">
+          Robust SaaS Boilerplate and Starter for Next.js
+        </h1>
+        <p class="text-gray-500 pr-10 pb-10">
+          Packed with all the key integrations you need for swift SaaS startup
+          launch, including - Authentication, Database, Sanity Blog, Essential
+          UI Components, Business Pages and More. Built-winth - Next.js, React
+          18 and TypeScript.
+        </p>
+        <button class="text-white font-medium bg-black px-10 py-3 rounded-4xl cursor-pointer">
+          Get Started
+        </button>
+      </div>
+
+      <div class="right pt-40 w-1/2">
+        <img class="shadow-lg w-full" src="/images/hero-light.svg" alt="" />
+      </div>
+    </section>
+
+    <section class="flex justify-between border border-none bg-gray-100 px-15 py-10 my-25 items-center">
+      <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out" src="/images/brand-light-01.svg"
+          alt="" /></a>
+      <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out" src="/images/brand-light-02.svg"
+          alt="" /></a>
+      <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out" src="/images/brand-light-03.svg"
+          alt="" /></a>
+      <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out" src="/images/brand-light-04.svg"
+          alt="" /></a>
+      <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out" src="/images/brand-light-05.svg"
+          alt="" /></a>
+      <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out" src="/images/brand-light-06.svg"
+          alt="" /></a>
+    </section>
+    <section class="text-center">
+      <h3 class="w-40 bg-blue-100 mb-5 mx-auto p-1 rounded-base font-normal">
+        SOLID FEATURES
+      </h3>
+      <h1 class="text-5xl font-bold mb-5">Core Features of Solid</h1>
+      <p class="w-xl mx-auto mb-5 text-gray-500">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+        tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in
+        maximus.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-5">
+        <div>
+          <img class="h-auto max-w-full rounded-base"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="" />
+        </div>
+        <div>
+          <img class="h-auto max-w-full rounded-base"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
+        </div>
+        <div>
+          <img class="h-auto max-w-full rounded-base"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="" />
+        </div>
+        <div>
+          <img class="h-auto max-w-full rounded-base"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="" />
+        </div>
+        <div>
+          <img class="h-auto max-w-full rounded-base"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="" />
+        </div>
+        <div>
+          <img class="h-auto max-w-full rounded-base"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="" />
+        </div>
+        <div>
+          <img class="h-auto max-w-full rounded-base"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="" />
+        </div>
+        <div>
+          <img class="h-auto max-w-full rounded-base"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="" />
+        </div>
+        <div>
+          <img class="h-auto max-w-full rounded-base"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="" />
+        </div>
+        <div>
+          <img class="h-auto max-w-full rounded-base"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="" />
+        </div>
+        <div>
+          <img class="h-auto max-w-full rounded-base"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="" />
+        </div>
+        <div>
+          <img class="h-auto max-w-full rounded-base"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- /////// Integrations ////// -->
+    <section class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto wow animate__animated animate__fadeInDown animate__slower">
+      <div class="mx-auto max-w-full px-4 md:px-8 2xl:px-0">
+        <div class="top mx-auto text-center mt-[113px]">
+          <div
+            class="mb-4 inline-block rounded-full bg-[#EDF2FF] px-4.5 py-1.5 dark:border dark:border-gray-700 dark:bg-black">
+            <span class="text-sm font-medium text-[#181c31] dark:text-white">INTEGRATIONS</span>
+          </div>
+          <h2 class="mx-auto mb-4 text-3xl font-bold text-[#181c31] dark:text-white md:w-4/5 xl:w-1/2 xl:text-xl">
+            Packed with all the key integrations you need
+          </h2>
+          <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+            convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
+            ante in maximus.
+          </p>
+        </div>
+      </div>
+      <div class="relative z-40 mx-auto mt-15 max-w-[1154px] px-4 md:px-8 xl:mt-20 xl:px-0">
+        <div class="absolute -top-[150px] left- right-0 -z-1 mx-auto h-full w-full">
+          <img alt="Dotlight" width="1200px" height="400px" class="dark-hidden dark:hidden"
+            src="/images/shape-dotted-light.svg" />
+          <img alt="Dotdark" class="dark-block hidden dark:block" src="/images/shape-dotted-dark.svg" />
+        </div>
+        <!-- Brand icons -->
+        <div class="flex flex-wrap justify-around gap-y-10">
+          <div class="w-[16.66%]">
+            <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-lg dark:bg-btndark">
+              <img alt="brand07" width="50px" height="50px" src="./images/brand-07.svg" />
             </div>
-        </nav>
-    </header>
-    <main>
-        <section class="flex px-20 gap-10 mx-auto items-center">
-            <div class="left pt-40 w-1/2 gap-[20px]">
-                <p class="font-medium mb-4">🔥 Solid - A Complete SaaS Starter Template for SaaS</p>
-                <h1 class="text-5xl font-bold mb-5 pr-20">Robust SaaS Boilerplate and Starter for Next.js</h1>
-                <p class="text-gray-500 pr-10 pb-10">Packed with all the key integrations you need for swift SaaS
-                    startup
-                    launch,
-                    including -
-                    Authentication, Database, Sanity Blog, Essential UI Components, Business Pages and More. Built-winth
-                    - Next.js, React 18 and TypeScript.</p>
-                <button class="text-white font-medium bg-black px-10 py-3 rounded-4xl cursor-pointer">Get
-                    Started</button>
+          </div>
+          <div class="w-[16.66%]"></div>
+          <div class="w-[16.66%]">
+            <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-lg dark:bg-btndark">
+              <img alt="brand08" width="50px" height="50px" src="./images/brand-08.svg" />
             </div>
-
-            <div class="right pt-40 w-1/2">
-                <img class="shadow-lg w-full" src="/images/hero-light.svg" alt="">
+          </div>
+          <div class="w-[16.66%]">
+            <div class="h-[11px] w-[11px] rounded-full bg-[#FFDB26]"></div>
+          </div>
+          <div class="w-[16.66%]">
+            <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-lg dark:bg-btndark">
+              <img alt="brand09" width="50px" height="50px" src="./images/brand-09.svg" />
             </div>
-        </section>
-
-        <section class="flex justify-between border border-none bg-gray-100 px-15 py-10 my-25 items-center">
-            <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out"
-                    src="/images/brand-light-01.svg" alt=""></a>
-            <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out"
-                    src="/images/brand-light-02.svg" alt=""></a>
-            <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out"
-                    src="/images/brand-light-03.svg" alt=""></a>
-            <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out"
-                    src="/images/brand-light-04.svg" alt=""></a>
-            <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out"
-                    src="/images/brand-light-05.svg" alt=""></a>
-            <a href="#"><img class="opacity-50 hover:opacity-100 duration-300 ease-in-out"
-                    src="/images/brand-light-06.svg" alt=""></a>
-        </section>
-        <section class="text-center">
-            <h3 class="w-40 bg-blue-100 mb-5 mx-auto p-1 rounded-base font-normal">SOLID FEATURES</h3>
-            <h1 class="text-5xl font-bold mb-5">Core Features of Solid</h1>
-            <p class="w-xl mx-auto mb-5 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis
-                tortor
-                eros.
-                Donec
-                vitae tortor
-                lacus. Phasellus aliquam ante in maximus.</p>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-5">
-                <div>
-                    <img class="h-auto max-w-full rounded-base"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-base"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-base"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-base"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-base"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-base"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-base"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-base"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-base"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-base"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-base"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-base"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
-                </div>
+          </div>
+          <div class="w-[16.66%]"></div>
+          <div class="w-[16.66%]">
+            <div class="h-[15px] w-[15px] rounded-full bg-[#62E888]"></div>
+          </div>
+          <div class="w-[16.66%]">
+            <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-lg dark:bg-btndark">
+              <img alt="brand10" width="50px" height="50px" src="./images/brand-10.svg" />
             </div>
+          </div>
+          <div class="w-[16.66%]">
+            <div class="h-[23px] w-[23px] rounded-full bg-[#EF5C00]"></div>
+          </div>
+          <div class="w-[16.66%]">
+            <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-lg dark:bg-btndark">
+              <img alt="brand11" width="50px" height="50px" src="./images/brand-11.svg" />
+            </div>
+          </div>
+          <div class="w-[16.66%]">
+            <div class="h-[15px] w-[15px] rounded-full bg-[#016BFF]"></div>
+          </div>
+          <div class="w-[16.66%]">
+            <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-lg dark:bg-btndark">
+              <img alt="brand12" width="50px" height="50px" src="./images/brand-12.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        </section>
+    <!-- ///// CTA ///// -->
+    <section
+      class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto overflow-hidden px-4 py-20 md:px-8 lg:py-25 xl:py-30 2xl:px-0">
+      <div
+        class="mx-auto max-w-full rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] px-7.5 py-12.5 dark:bg-black dark:bg-gradient-to-t dark:from-transparent dark:to-transparent md:px-12.5 xl:px-17.5 xl:py-0">
+        <div class="flex flex-wrap gap-8 md:flex-nowrap md:items-center md:justify-between md:gap-0">
+          <div class="md:w-[70%] lg:w-1/2 wow animate__animated animate__fadeInLeft animate__slower">
+            <h2 class="mb-4 w-11/12 text-3xl font-bold text-[#181c31] dark:text-white">
+              Join With Us Today Increase Your Productivity
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              convallis tortor eros. Donec vitae tortor lacus. Phasellus
+              aliquam ante in maximus.
+            </p>
+          </div>
+          <div class="lg:w-[45%] wow animate__animated animate__fadeInRight animate__slower">
+            <div class="flex items-center justify-end xl:justify-between">
+              <img alt="CTA" width="299px" height="299px" class="cta-img hidden xl:block" src="./images/image_46.png" />
+              <a href="#!"
+                class="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-[#181c31]">Sign
+                up free<span class="pl-2.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-       <!-- /////// Integrations ////// -->
- <section class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto wow animate__animated animate__fadeInDown animate__slower">
-<div class="mx-auto max-w-full px-4 md:px-8 2xl:px-0">
-  <div class="top mx-auto text-center mt-[113px]">
- <div
-class="mb-4 inline-block rounded-full bg-[#EDF2FF] px-4.5 py-1.5 dark:border dark:border-gray-700 dark:bg-black"
- >
-<span class="text-sm font-medium text-[#181c31] dark:text-white"
-  >INTEGRATIONS</span
->
- </div>
- <h2
-class="mx-auto mb-4 text-3xl font-bold text-[#181c31] dark:text-white md:w-4/5 xl:w-1/2 xl:text-xl"
- >
-Packed with all the key integrations you need
- </h2>
- <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-ante in maximus.
- </p>
-  </div>
-</div>
-<div
-  class="relative z-40 mx-auto mt-15 max-w-[1154px] px-4 md:px-8 xl:mt-20 xl:px-0"
->
-  <div
- class="absolute -top-[150px] left- right-0 -z-1 mx-auto h-full w-full"
-  >
- <img
-alt="Dotlight"
-width="1200px"
-height="400px"
-class="dark-hidden dark:hidden"
-src="/images/shape-dotted-light.svg"
- />
- <img
-alt="Dotdark"
-class="dark-block hidden dark:block"
-src="/images/shape-dotted-dark.svg"
- />
-  </div>
-  <!-- Brand icons -->
-  <div class="flex flex-wrap justify-around gap-y-10">
- <div class="w-[16.66%]">
-<div
-  class="inline-block rounded-[10px] bg-white p-4.5 shadow-lg dark:bg-btndark"
->
-  <img
- alt="brand07"
- width="50px"
- height="50px"
- src="./images/brand-07.svg"
-  />
-</div>
- </div>
- <div class="w-[16.66%]"></div>
- <div class="w-[16.66%]">
-<div
-  class="inline-block rounded-[10px] bg-white p-4.5 shadow-lg dark:bg-btndark"
->
-  <img
- alt="brand08"
- width="50px"
- height="50px"
- src="./images/brand-08.svg"
-  />
-</div>
- </div>
- <div class="w-[16.66%]">
-<div class="h-[11px] w-[11px] rounded-full bg-[#FFDB26]"></div>
- </div>
- <div class="w-[16.66%]">
-<div
-  class="inline-block rounded-[10px] bg-white p-4.5 shadow-lg dark:bg-btndark"
->
-  <img
- alt="brand09"
- width="50px"
- height="50px"
- src="./images/brand-09.svg"
-  />
-</div>
- </div>
- <div class="w-[16.66%]"></div>
- <div class="w-[16.66%]">
-<div class="h-[15px] w-[15px] rounded-full bg-[#62E888]"></div>
- </div>
- <div class="w-[16.66%]">
-<div
-  class="inline-block rounded-[10px] bg-white p-4.5 shadow-lg dark:bg-btndark"
->
-  <img
- alt="brand10"
- width="50px"
- height="50px"
- src="./images/brand-10.svg"
-  />
-</div>
- </div>
- <div class="w-[16.66%]">
-<div class="h-[23px] w-[23px] rounded-full bg-[#EF5C00]"></div>
- </div>
- <div class="w-[16.66%]">
-<div
-  class="inline-block rounded-[10px] bg-white p-4.5 shadow-lg dark:bg-btndark"
->
-  <img
- alt="brand11"
- width="50px"
- height="50px"
- src="./images/brand-11.svg"
-  />
-</div>
- </div>
- <div class="w-[16.66%]">
-<div class="h-[15px] w-[15px] rounded-full bg-[#016BFF]"></div>
- </div>
- <div class="w-[16.66%]">
-<div
-  class="inline-block rounded-[10px] bg-white p-4.5 shadow-lg dark:bg-btndark"
->
-  <img
- alt="brand12"
- width="50px"
- height="50px"
- src="./images/brand-12.svg"
-  />
-</div>
- </div>
-  </div>
-</div>
- </section>
+    <!-- ////// FAQs ////// -->
+    <section
+      class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto overflow-hidden pb-20 lg:pb-25 xl:pb-30 wow animate__animated animate__fadeInLeft animate__slower">
+      <div class="faq-content w-[89%] relative mx-auto max-w-full px-4 md:px-8 xl:px-0">
+        <div class="absolute -bottom-16 -z-1 h-full w-full">
+          <img alt="Dotlight" class="dark-block dark:hidden" src="/images/shape-dotted-light.svg" />
+          <img alt="Dotlight" class="dark-block hidden dark:block" src="/images/shape-dotted-light.svg" />
+        </div>
+        <div class="flex sm:flex-wrap gap-8 md:flex-nowrap md:items-center sm:items-center xl:gap-32.5">
+          <div class="md:w-2/5 lg:w-1/2">
+            <span class="font-medium text-[#181c31] dark:text-white">OUR FAQS</span>
+            <h2 class="relative mb-6 text-3xl font-bold text-[#181c31] dark:text-white">
+              Frequently Asked Questions
+            </h2>
+            <a href="#!"
+              class="group mt-7.5 inline-flex items-center gap-2.5 text-[#181c31] hover:text-indigo-700 dark:text-white dark:hover:text-indigo-700">
+              <span class="duration-300 group-hover:pr-2">Know More</span><svg xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg></a>
+          </div>
+          <!-- Q&A box -->
+          <div class="right sm:w-3/5 md:w-1/2">
+            <div class="border-gray-200 border-b bg-white px-7.5 py-2 shadow-lg max-w-[691px] relative lg:px-9">
+              <input type="checkbox" name="faq" id="faq1" class="appearance-none hidden peer" />
+              <label for="faq1"
+                class="flex items-center font-semibold cursor-pointer relative after:absolute after:content-['⁺'] after:right-2 after:text-2xl after:text-[#181c31] hover:after:text-gray-900 peer-checked:after:transform peer-checked:after:content-['-']">
+                <h3 class="text-base">
+                  Lorem ipsum dolor sit amet, consectetur
+                </h3>
+              </label>
+              <div class="answer mt-6 h-0 overflow-hidden transition ease-in-out duration-500 peer-checked:h-full">
+                <p class="text-sm text-gray-500">
+                  We provide digital experience services to startups and small
+                  businesses. We help our clients succeed by creating brand
+                  identities, digital experiences.
+                </p>
+              </div>
+            </div>
+            <div class="tab border-gray-200 border-b bg-white px-7.5 py-2 shadow-lg max-w-[691px] relative lg:px-9">
+              <input type="checkbox" name="faq" id="faq2" class="appearance-none hidden peer" />
+              <label for="faq2"
+                class="flex items-center font-semibold cursor- pointer relative after:absolute after:content-['⁺'] after:right-2 after:text-2xl after:text-[#181c31] hover:after:text-gray-900 peer-checked:after:transform peer-checked:after:content-['-']">
+                <h3 class="text-base">
+                  Lorem ipsum dolor sit amet, consectetur
+                </h3>
+              </label>
+              <div class="answer mt-5 h-0 overflow-hidden transition ease-in-out duration-500 peer-checked:h-full">
+                <p class="text-sm text-gray-500">
+                  We provide digital experience services to startups and small
+                  businesses. We help our clients succeed by creating brand
+                  identities, digital experiences.
+                </p>
+              </div>
+            </div>
+            <div class="tab border-gray-200 border-b bg-white px-7.5 py-2 shadow-lg max-w-[691px] relative lg:px-9">
+              <input type="checkbox" name="faq" id="faq3" class="appearance-none hidden peer" />
+              <label for="faq3"
+                class="flex items-center font-semibold cursor-pointer relative after:absolute after:content-['⁺'] after:right-2 after:text-2xl after:text-[#181c31] hover:after:text-gray-900 peer-checked:after:transform peer-checked:after:content-['-']">
+                <h3 class="text-base">
+                  Lorem ipsum dolor sit amet, consectetur
+                </h3>
+              </label>
+              <div class="answer mt-5 h-0 overflow-hidden transition ease-in-out duration-500 peer-checked:h-full">
+                <p class="text-sm text-gray-500">
+                  We provide digital experience services to startups and small
+                  businesses. We help our clients succeed by creating brand
+                  identities, digital experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
- <!-- ///// CTA ///// -->
- <section
-class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto overflow-hidden px-4 py-20 md:px-8 lg:py-25 xl:py-30 2xl:px-0"
- >
-<div
-  class="mx-auto max-w-full rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] px-7.5 py-12.5 dark:bg-black dark:bg-gradient-to-t dark:from-transparent dark:to-transparent md:px-12.5 xl:px-17.5 xl:py-0"
->
-  <div
- class="flex flex-wrap gap-8 md:flex-nowrap md:items-center md:justify-between md:gap-0"
-  >
- <div class="md:w-[70%] lg:w-1/2 wow animate__animated animate__fadeInLeft animate__slower ">
-<h2
-  class="mb-4 w-11/12 text-3xl font-bold text-[#181c31] dark:text-white"
->
-  Join With Us Today Increase Your Productivity
-</h2>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-  convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-  ante in maximus.
-</p>
- </div>
- <div class="lg:w-[45%] wow animate__animated animate__fadeInRight animate__slower">
-<div class="flex items-center justify-end xl:justify-between">
-  <img
- alt="CTA"
- width="299px"
- height="299px"
- class="cta-img hidden xl:block"
- src="./images/image_46.png"
-  />
-  <a
- href="#!"
- class="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-[#181c31]"
- >Sign up free<span class="pl-2.5">
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-  viewBox="0 0 24 24"
-  stroke-width="1.5"
-  stroke="currentColor"
-  class="size-4"
->
-  <path
- stroke-linecap="round"
- stroke-linejoin="round"
- d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></span>
+    <!-- //////// Testimonials //////// -->
+    <section class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto wow animate__animated animate__fadeInDown animate__slower">
+      <!-- Top -->
+      <div class="mx-auto max-w-full px-4 md:px-8 xl:px-0">
+        <div class="mx-auto text-center">
+          <div class="mx-auto text-center">
+            <div
+              class="mb-4 inline-block rounded-full bg-[#EAF0FF] px-4.5 py-1.5 dark:border border-gray-700 dark:bg-black">
+              <span class="font-medium text-sm text-[#181c31] dark:text-white">TESTIMONIALS</span>
+            </div>
+            <h2 class="mx-auto mb-4 text-3xl font-bold text-[#181c31] dark:text-white md:w-4/5 xl:w-1/2">
+              Client's Testimonials
+            </h2>
+            <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              convallis tortor eros. Donec vitae tortor lacus. Phasellus
+              aliquam ante in maximus.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom-slider -->
+      <div class="slick-items mt-[75px] mx-[50px] px-4 md:px-8 xl:mt-20 xl:px-0">
+        <!-- slide 1 -->
+        <div class="px-[20px] md:box-border">
+          <div
+            class="items rounded-lg shadow-sm bg-white mb-[30px] dark:border dark:border-gray-700 dark:bg-black dark:shadow-none">
+            <div
+              class="items-top flex justify-between py-[38px] border-b border-gray-200 w-[657px] mx-auto border-gray-300 dark:border-gray-700">
+              <div>
+                <h3 class="text-[#181c31] font-4.5 leading-1.4 mb-1.5">
+                  Devid Smith
+                </h3>
+                <p class="text-[#757693] text-[17px] leading-1.4">
+                  Founter @democompany
+                </p>
+              </div>
+              <div class="img">
+                <img src="./images/image_1.png" alt="avartar01" width="60px" height="60px" class= "object-cover rounded-full" />
+              </div>
+            </div>
+            <div class="items-bottom pt-[38px] pb-[45px] w-[657px] mx-auto">
+              <p class="text-[#757693] text-[17px] leading-[26px]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem
+                elementum nisi, convallis fringilla ante nibh non urna.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- slide 2 -->
+        <div class="px-[20px] md:box-border">
+          <div
+            class="items rounded-lg shadow-sm bg-white mb-[30px] dark:border dark:border-gray-700 dark:bg-black dark:shadow-none">
+            <div
+              class="items-top flex justify-between py-[38px] border-b border-gray-200 w-[657px] mx-auto border-gray-300 dark:border-gray-700">
+              <div>
+                <h3 class="text-[#181c31] font-4.5 leading-1.4 mb-1.5">
+                  Jhon Abraham
+                </h3>
+                <p class="text-[#757693] text-[17px] leading-1.4">
+                  Founter @democompany
+                </p>
+              </div>
+              <div class="img">
+                <img src="./images/image_1.png" alt="avartar01" width="60px" height="60px" class= "object-cover rounded-full" />
+              </div>
+            </div>
+            <div class="items-bottom pt-[38px] pb-[45px] w-[657px] mx-auto">
+              <p class="text-[#757693] text-[17px] leading-[26px]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem
+                elementum nisi, convallis fringilla ante nibh non urna.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- slide 3 -->
+        <div class="px-[20px] md:box-border">
+          <div
+            class="items rounded-lg shadow-sm bg-white mb-[30px] dark:border dark:border-gray-700 dark:bg-black dark:shadow-none">
+            <div
+              class="items-top flex justify-between py-[38px] border-b border-gray-200 w-[657px] mx-auto border-gray-300 dark:border-gray-700">
+              <div>
+                <h3 class="text-[#181c31] font-4.5 leading-1.4 mb-1.5">
+                  Devid Smith
+                </h3>
+                <p class="text-[#757693] text-[17px] leading-1.4">
+                  Founter @democompany
+                </p>
+              </div>
+              <div class="img">
+                <img src="./images/image_1.png" alt="avartar01" width="60px" height="60px" class= "object-cover rounded-full" />
+              </div>
+            </div>
+            <div class="items-bottom pt-[38px] pb-[45px] w-[657px] mx-auto">
+              <p class="text-[#757693] text-[17px] leading-[26px]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem
+                elementum nisi, convallis fringilla ante nibh non urna.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- //////// Pricing //////// -->
+    <section
+      class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto max-w-full overflow-hidden pb-20 pt-15 lg:pb-25 xl:pb-30 wow animate__animated animate__fadeInDown animate__slower">
+      <div class="mx-auto max-w-full px-4 md:px-8 xl:px-0">
+        <div class="mx-auto text-center">
+          <div class="mx-auto text-center">
+            <div
+              class="mb-4 inline-block rounded-full bg-[#EAF0FF] px-4.5 py-1.5 dark:border dark:border-gray-700 dark:bg-black">
+              <span class="text-sm text-[#181c31] font-medium dark:text-white">PRICING PLANS</span>
+            </div>
+            <h2 class="mx-auto mb-4 text-3xl font-bold text-[#181c31] dark:text-white md:w-4/5 xl:w-1/2">
+              Simple Pricing
+            </h2>
+            <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              convallis tortor eros. Donec vitae tortor lacus. Phasellus
+              aliquam ante in maximus.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="relative mx-auto mt-15 max-w-[1207px] px-4 md:px-8 xl:mt-20 xl:px-0">
+        <div class="absolute -bottom-50 -z-1 h-full w-full">
+          <img alt="Dotlight" class="dark-block dark:hidden" src="./images/shape-dotted-light.svg" />
+        </div>
+        <div class="flex md:flex-wrap sm:flex-wrap justify-center gap-7.5 lg:flex-nowrap xl:gap-12.5">
+          <div
+            class="group relative rounded-lg border-gray-300 bg-white p-7.5 shadow-lg dark:border-gray-700 dark:bg-black dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
+            <h3 class="mb-7.5 text-3xl font-bold text-[#181c31] dark:text-white">
+              $ 100<span class="text-xs text-[#7F8699] dark:text-[#8D94A1]">/month</span>
+            </h3>
+            <h4 class="mb-2.5 text-base font-medium text-[#181c31] dark:text-white">
+              Small Pack
+            </h4>
+            <p class="text-[#7F8699] text-sm">
+              Lorem ipsum dolor sit amet, consec adipisicing elit.
+            </p>
+            <div class="mt-9 border-t border-t-gray-300 border-gray-300 pb-12.5 pt-9 dark:border-gray-700">
+              <ul>
+                <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">
+                  300 GB Storage
+                </li>
+                <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">
+                  Unlimited Photos and Videos
+                </li>
+                <li class="mb-4 text-sm text-[#181c31] opacity-40 last:mb-0 dark:text-[#8D94A1]">
+                  Exclusive Support
+                </li>
+                <li class="mb-4 text-sm text-[#181c31] opacity-40 last:mb-0 dark:text-[#8D94A1]">
+                  Custom Branding Strategy
+                </li>
+              </ul>
+            </div>
+            <button
+              class="group/btn cursor-pointer inline-flex items-center gap-2.5 font-medium text-indigo-600 transition-all duration-300 dark:text-white dark:hover:text-indigo-600">
+              <span class="duration-300 group-hover/btn:pr-2">
+                Get the Plan</span><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z"
+                  fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="group relative rounded-lg border-gray-300 bg-white p-7.5 shadow-lg dark:stroke dark dark:bg-black dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
+            <div
+              class="absolute -right-2 top-6 bg-blue-500 text-white text-[12px] font-semibold px-4 py-2 -rotate-90 rounded-l-full tracking-wide">
+              POPULAR
+            </div>
+            <h3 class="mb-7.5 text-3xl font-bold text-[#181c31] dark:text-white xl:text-sectiontitle3">
+              $ 200<span class="text-xs text-[#7F8699] dark:text-[#8D94A1]">/month</span>
+            </h3>
+            <h4 class="mb-2.5 text-base font-medium text-[#181c31] dark:text-white">
+              Medium Pack
+            </h4>
+            <p class="text-[#7F8699] text-sm">
+              Lorem ipsum dolor sit amet, consec adipisicing elit.
+            </p>
+            <div class="mt-9 border-t border-t-gray-300 border-gray-300 pb-12.5 pt-9 dark:border-gray-700">
+              <ul>
+                <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">
+                  300 GB Storage
+                </li>
+                <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">
+                  Unlimited Photos and Videos
+                </li>
+                <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">
+                  Exclusive Support
+                </li>
+                <li class="mb-4 text-sm text-[#181c31] opacity-40 last:mb-0 dark:text-[#8D94A1]">
+                  Custom Branding Strategy
+                </li>
+              </ul>
+            </div>
+            <button
+              class="group/btn cursor-pointer inline-flex items-center gap-2.5 font-medium text-indigo-600 transition-all duration-300 dark:text-white dark:hover:text-indigo-600">
+              <span class="duration-300 group-hover/btn:pr-2">
+                Get the Plan</span><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z"
+                  fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="group relative rounded-lg border-gray-300 bg-white p-7.5 shadow-lg dark:border-gray-700 dark:bg-black dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
+            <h3 class="mb-7.5 text-3xl font-bold text-[#181c31] dark:text-white xl:text-sectiontitle3">
+              $ 300<span class="text-xs text-[#7F8699] dark:text-[#8D94A1]">/month</span>
+            </h3>
+            <h4 class="mb-2.5 text-base font-medium text-[#181c31] dark:text-white">
+              Large Pack
+            </h4>
+            <p class="text-[#7F8699] text-sm">
+              Lorem ipsum dolor sit amet, consec adipisicing elit.
+            </p>
+            <div class="mt-9 border-t border-t-gray-300 border-gray-300 pb-12.5 pt-9 dark:border-gray-700">
+              <ul>
+                <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">
+                  300 GB Storage
+                </li>
+                <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">
+                  Unlimited Photos and Videos
+                </li>
+                <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">
+                  Exclusive Support
+                </li>
+                <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">
+                  Custom Branding Strategy
+                </li>
+              </ul>
+            </div>
+            <button
+              class="group/btn cursor-pointer inline-flex items-center gap-2.5 font-medium text-indigo-600 transition-all duration-300 dark:text-white dark:hover:text-indigo-600">
+              <span class="duration-300 group-hover/btn:pr-2">
+                Get the Plan</span><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z"
+                  fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- //////// Contact Form ///////// -->
+    <section class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto px-4 md:px-8 2xl:px-0">
+      <div class="relative mx-auto max-w-[1731px] px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
+        <div
+          class="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-[#fff] to-[#dee7ff47] dark:bg-gradient-to-t dark:from-transparent dark:to-[#24283E]">
+        </div>
+        <div class="absolute bottom-[-255px] left-0 -z-1 h-full w-full">
+          <img alt="Dotted" class="dark-block dark:hidden" src="./images/shape-dotted-light.svg" />
+          <img alt="Dotted" class="dark-block hidden dark:block" src="./images/shape-dotted-dark.svg" />
+        </div>
+        <div
+          class="flex flex-col-reverse md:flex-wrap gap-8 md:flex-row lg:flex-nowrap lg:justify-between xl:gap-20">
+          <div
+            class="max-w-[1061px] w-full rounded-lg bg-white p-7.5 shadow-lg dark:border dark:border-gray-700 dark:bg-black sm:w-3/5 md:w-3/4 xl:p-15">
+            <h2 class="mb-15 text-5xl font-semibold text-[#181c31] dark:text-white xl:text-4xl">
+              Send a message
+            </h2>
+            <form action="">
+              <div class="mb-7.5 flex sm:flex-col gap-7.5 md:flex-row md:justify-between md:gap-14">
+                <input placeholder="Full name"
+                  class="form-name text-sm w-full border-b border-gray-300 bg-transparent pb-3.5 focus:border-gray-500 focus:placeholder:text-black focus-visible:outline-none dark:border-gray-500 dark:focus:border-[#8E9196] dark:focus:placeholder:text-white lg:w-1/2"
+                  type="text"/>
+                <input placeholder="Email address"
+                  class="form-email text-sm w-full border-b border-gray-300 bg-transparent pb-3.5 focus:border-gray-500 focus:placeholder:text-black focus-visible:outline-none dark:border-gray-500 dark:focus:border-[#8E9196] dark:focus:placeholder:text-white lg:w-1/2"
+                  type="email" />
+              </div>
+              <div class="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
+                <input placeholder="Subject"
+                  class="form-subject text-sm w-full border-b border-gray-300 bg-transparent pb-3.5 focus:border-gray-500 focus:placeholder:text-black focus-visible:outline-none dark:border-gray-500 dark:focus:border-[#8E9196] dark:focus:placeholder:text-white lg:w-1/2"
+                  type="text" />
+                <input placeholder="Phone number"
+                  class="form-phone text-sm w-full border-b border-gray-300 bg-transparent pb-3.5 focus:border-gray-500 focus:placeholder:text-black focus-visible:outline-none dark:border-gray-500 dark:focus:border-[#8E9196] dark:focus:placeholder:text-white lg:w-1/2"
+                  type="text" />
+              </div>
+              <div class="mb-11.5 flex">
+                <textarea placeholder="Message" rows="4"
+                  class="form-text text-sm w-full border-b border-gray-300 bg-transparent focus:border-gray-500 focus:placeholder:text-black focus-visible:outline-none dark:border-gray-500 dark:focus:border-[#8E9196] dark:focus:placeholder:text-white"></textarea>
+              </div>
+              <div class="flex md:flex-wrap lg:flex-nowrap gap-4 xl:justify-between">
+                <div class="mb-4 flex md:mb-0">
+                  <label for="default-checkbox"
+                    class="flex max-w-[425px] cursor-pointer select-none text-sm text-[#7F8699]">
+                    <input id="default-checkbox" class="peer sr-only" type="checkbox" />
+                    <span
+                      class="group mt-2 mr-2 flex h-5 min-w-[20px] items-center justify-center rounded border-gray-300 bg-gray-100 text-blue-600 peer-checked:bg-indigo-700 dark:border-gray-600 dark:bg-gray-700">
+                      <svg class="opacity-0 peer-checked:group-[]:opacity-100" width="10" height="8" viewBox="0 0 10 8"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M9.70704 0.792787C9.89451 0.980314 9.99983 1.23462 9.99983 1.49979C9.99983 1.76495 9.89451 2.01926 9.70704 2.20679L4.70704 7.20679C4.51951 7.39426 4.26521 7.49957 4.00004 7.49957C3.73488 7.49957 3.48057 7.39426 3.29304 7.20679L0.293041 4.20679C0.110883 4.01818 0.0100885 3.76558 0.0123669 3.50339C0.0146453 3.24119 0.119814 2.99038 0.305222 2.80497C0.490631 2.61956 0.741443 2.51439 1.00364 2.51211C1.26584 2.50983 1.51844 2.61063 1.70704 2.79279L4.00004 5.08579L8.29304 0.792787C8.48057 0.605316 8.73488 0.5 9.00004 0.5C9.26521 0.5 9.51951 0.605316 9.70704 0.792787Z"
+                          fill="white"></path>
+                      </svg> </span>By clicking Checkbox, you agree to use our “Form” terms
+                    And consent cookie usage in browser.</label>
+                </div>
+                <button
+                  class="inline-flex min-w-max items-center flex-nowrap gap-2.5 rounded-full bg-black px-4 py-2 font-medium text-white duration-300 cursor-pointer ease-in-out hover:bg-[#002E63] dark:bg-btndark">
+                  Send Message
+                  <svg class="fill-white" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
+                      fill=""></path>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="md:w-2/5 md:p-7.5 lg:w-1/4 lg:w-[26%] xl:pt-15 ">
+            <h3 class="mb-12.5 text-5xl font-semibold text-black dark:text-white xl:text-4xl">
+              Find us
+            </h3>
+            <div class="5 mb-7">
+              <h4 class="mb-4 text-base font-medium text-black dark:text-white">
+                Our Loaction
+              </h4>
+              <p class="text-gray-600 text-sm">
+                290 Maryam Springs 260, Courbevoie, Paris, France
+              </p>
+            </div>
+            <div class="5 mb-7">
+              <h4 class="mb-4 text-base font-medium text-black dark:text-white">
+                Email Address
+              </h4>
+              <p>
+                <a class="text-gray-600 text-sm" href="#">yourmail@domainname.com</a>
+              </p>
+            </div>
+            <div>
+              <h4 class="mb-4 text-base font-medium text-black dark:text-white">
+                Phone Number
+              </h4>
+              <p>
+                <a class="text-gray-600 text-sm" href="#">+009 42334 6343 843</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ////////// Blog&News ///////// -->
+    <section
+      class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto py-20 lg:py-25 xl:py-30 wow animate__animated animate__fadeInDown animate__slower">
+      <div class="mx-auto max-w-full px-4 md:px-8 xl:px-0">
+        <div class="mx-auto text-center">
+          <div class="mx-auto text-center">
+            <div
+              class="mb-4 inline-block rounded-full bg-[#EAF0FF] bg-[#E2E8F0] px-4.5 py-1.5 dark:border dark:border-gray-700 dark:bg-black">
+              <span class="text-sm font-medium text-[#181c31] dark:text-white">NEWS BLOGS</span>
+            </div>
+            <h2 class="mx-auto mb-4 text-3xl font-bold text-[#181c31] dark:text-white md:w-4/5 xl:w-1/2 xl:text-xl">
+              Latest News Blogs
+            </h2>
+            <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              convallis tortor eros. Donec vitae tortor lacus. Phasellus
+              aliquam ante in maximus.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0 w-[92%]">
+        <div class="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
+          <div class="group rounded-lg bg-white p-4 pb-9 shadow-sm dark:bg-black">
+            <a class="relative block aspect-[368/239] overflow-hidden rounded-lg" href="#!">
+              <img alt="Exploring MERN Stack: Powering Modern Web Development"
+                class="duration-300 group-hover:scale-110" src="./images/image_25.png" sizes="100vw" /></a>
+            <div class="px-4">
+              <h3
+                class="mb-3.5 mt-7.5 line-clamp-2 text-lg font-medium text-[#181c31] hover:text-indigo-600 dark:text-white dark:hover:text-indigo-600 xl:text-itemtitle2">
+                <a href="#!">Exploring MERN Stack: Powering Modern We...</a>
+              </h3>
+              <p class="line-clamp-3 text-[#7F8699]">
+                In the world of web development, staying ahead of the curve is
+                crucial. One technology stack that ha
+              </p>
+            </div>
+          </div>
+          <div class="group rounded-lg bg-white p-4 pb-9 shadow-sm dark:bg-black">
+            <a class="relative block aspect-[368/239] overflow-hidden rounded-lg"
+              href="/blog/best-ui-components-for-modern-websites">
+              <img alt="Best UI components for modern website"
+                class="duration-300 group-hover:scale-110 w-[640px] h-[427px]" src="./images/image_29.png"
+                sizes="100vw" /></a>
+            <div class="px-4">
+              <h3
+                class="mb-3.5 mt-7.5 line-clamp-2 text-lg font-medium text-[#181c31] hover:text-indigo-600 dark:text-white dark:hover:text-indigo-600 xl:text-itemtitle2">
+                <a href="#!">Best UI components for modern website...</a>
+              </h3>
+              <p class="line-clamp-3 text-[#7F8699]">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat.
+              </p>
+            </div>
+          </div>
+          <div class="group rounded-lg bg-white p-4 pb-9 shadow-sm dark:bg-black">
+            <a class="relative block aspect-[368/239] overflow-hidden rounded-lg" href="#!">
+              <img alt="The Power of UI/UX: Elevating Digital Experiences"
+                class="duration-300 group-hover:scale-110 w-[640px] h-[427px]" src="./images/image_31.png"
+                sizes="100vw" /></a>
+            <div class="px-4">
+              <h3
+                class="mb-3.5 mt-7.5 line-clamp-2 text-lg font-medium text-[#181c31] hover:text-indigo-600 dark:text-white dark:hover:text-indigo-600 xl:text-itemtitle2">
+                <a href="#!">The Power of UI/UX: Elevating Digital Ex...</a>
+              </h3>
+              <p class="line-clamp-3 text-[#7F8699]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                sit amet dictum neque, laoreet dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ///////// Footer /////// -->
+  <footer
+    class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto border-t border-t-gray-300 border-gray-300 bg-white dark:border-gray-700 dark:bg-black wow animate__animated animate__slideInDown">
+    <div class="mx-auto max-w-full px-4 md:px-8 2xl:px-0">
+      <div class="py-20 lg:py-25">
+        <div class="flex md:flex-wrap gap-8 lg:justify-between lg:flex-nowrap lg:gap-0">
+          <div class="w-1/2 lg:w-1/4">
+            <a href="#!" class="relative">
+              <img alt="Logo" width="110" height="80" class="dark:hidden" src="./images/logo-light.svg" />
+              <img alt="Logo" width="110" height="80" class="hidden dark:block" src="./images/logo-dark.svg" />
+            </a>
+            <p class="mb-10 mt-5 text-sm text-[#757693]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="mb-1.5 text-[#757693] text-sm tracking-[5px]">
+              CONTACT
+            </p>
+            <a href="#" class="text-lg font-medium text-gray dark:text-white">hello@solid.com</a>
+          </div>
+          <div class="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
+            <div class="">
+              <h4 class="mb-9 text-base font-medium text-[#181c31] dark:text-white">
+                Quick Links
+              </h4>
+              <ul>
+                <li>
+                  <a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Home</a>
+                </li>
+                <li>
+                  <a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Product</a>
+                </li>
+                <li>
+                  <a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Careers</a>
+                </li>
+                <li>
+                  <a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Pricing</a>
+                </li>
+              </ul>
+            </div>
+            <div class="">
+              <h4 class="mb-9 text-base font-medium text-[#181c31] dark:text-white">
+                Support
+              </h4>
+              <ul>
+                <li>
+                  <a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Company</a>
+                </li>
+                <li>
+                  <a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Press media</a>
+                </li>
+                <li>
+                  <a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Our Blog</a>
+                </li>
+                <li>
+                  <a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="">
+              <h4 class="mb-9 text-base font-medium text-[#181c31] dark:text-white">
+                Newsletter
+              </h4>
+              <p class="mb-4 w-[90%] text-[#757693]">
+                Subscribe to receive future updates
+              </p>
+              <form>
+                <div class="relative">
+                  <input type="email" placeholder="Email address" required=""
+                    class="w-full text-sm rounded-full border border-gray-300 px-6 py-3 shadow-sm focus:border-indigo-500 focus:outline-none dark:border-gray-700 dark:bg-black dark:shadow-none dark:focus:border-text-indigo-500"
+                    value="" />
+                  <button class="absolute right-4 -top-1 p-4">
+                    <i class="fa-solid fa-forward-fast text-[#757693] hover:text-indigo-500 dark:text-white"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col flex-wrap md:items-center md:justify-center border-t border-t-gray-300 border-gray-300 py-7 dark:border-gray-700 lg:flex-row lg:justify-between lg:gap-0">
+        <div class="">
+          <ul class="flex items-center gap-8">
+            <li>
+              <a href="#" class="text-sm text-[#757693] hover:text-indigo-500">English</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm text-[#757693] hover:text-indigo-500">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm text-[#757693] hover:text-indigo-500">Support</a>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+          <p class="text-[#757693] text-sm">
+            © 2025 Solid. All rights reserved
+          </p>
+        </div>
+        <div class="">
+          <ul class="flex items-center gap-5">
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-facebook-f text-[#757693] transition-all duration-300 hover:text-indigo-500"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-twitter text-[#757693] transition-all duration-300 hover:text-indigo-500"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i
+                  class="fa-brands fa-linkedin-in text-[#757693] transition-all duration-300 hover:text-indigo-500"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-behance text-[#757693] transition-all duration-300 hover:text-indigo-500"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#" class="back-to-top cd-top text-replace js-cd-top">
+    <i class="fa-solid fa-chevron-up"></i>
   </a>
-</div>
- </div>
-  </div>
-</div>
- </section>
 
- <!-- ////// FAQs ////// -->
-  <section class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto overflow-hidden pb-20 lg:pb-25 xl:pb-30 wow animate__animated animate__fadeInLeft animate__slower ">
-<div class="faq-content w-[89%] relative mx-auto max-w-full px-4 md:px-8 xl:px-0">
-<div class="absolute -bottom-16 -z-1 h-full w-full">
-  <img alt="Dotlight" class="dark-block dark:hidden" src="/images/shape-dotted-light.svg" />
-  <img alt="Dotlight" class="dark-block hidden dark:block" src="/images/shape-dotted-light.svg" />
-</div>
-<div class="flex md:flex-wrap gap-8 lg:flex-nowrap md:items-center xl:gap-32.5">
-<div class="md:w-2/5 lg:w-1/2"><span class="font-medium text-[#181c31] dark:text-white">OUR FAQS</span>
-<h2 class="relative mb-6 text-3xl font-bold text-[#181c31] dark:text-white">Frequently Asked Questions</h2>
-<a href="#!" class="group mt-7.5 inline-flex items-center gap-2.5 text-[#181c31] hover:text-indigo-700
- dark:text-white dark:hover:text-indigo-700">
- <span class="duration-300 group-hover:pr-2">Know More</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-</svg></a>
-</div>
-<!-- Q&A box -->
-<div class="right md:w-3/5 lg:w-1/2 ">
-    <div class="border-gray-200 border-b bg-white px-7.5 py-2 shadow-lg max-w-[691px] relative lg:px-9">
-      <input type="checkbox" name="faq" id="faq1" class="appearance-none hidden peer">
-      <label for="faq1" class="flex items-center font-semibold cursor-pointer relative after:absolute after:content-['⁺'] after:right-2 after:text-2xl after:text-[#181c31] hover:after:text-gray-900 peer-checked:after:transform peer-checked:after:content-['-']">
-        <h3 class="text-base">Lorem ipsum dolor sit amet, consectetur</h3>
-      </label>
-      <div class="answer mt-6 h-0 overflow-hidden transition ease-in-out duration-500 peer-checked:h-full">
-        <p class="text-sm text-gray-500">We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.</p>
-      </div>
-    </div>
-    <div class="tab border-gray-200 border-b bg-white px-7.5 py-2 shadow-lg max-w-[691px] relative lg:px-9">
-      <input type="checkbox" name="faq" id="faq2" class="appearance-none hidden peer">
-      <label for="faq2" class="flex items-center font-semibold cursor- pointer relative after:absolute after:content-['⁺'] after:right-2 after:text-2xl after:text-[#181c31] hover:after:text-gray-900 peer-checked:after:transform peer-checked:after:content-['-']">
-        <h3 class="text-base" >Lorem ipsum dolor sit amet, consectetur</h3>
-      </label>
-      <div class="answer mt-5 h-0 overflow-hidden transition ease-in-out duration-500 peer-checked:h-full  ">
-        <p class="text-sm text-gray-500">We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.</p>
-      </div>
-    </div>
-    <div class="tab border-gray-200 border-b bg-white px-7.5 py-2 shadow-lg max-w-[691px] relative lg:px-9">
-      <input type="checkbox" name="faq" id="faq3" class="appearance-none hidden peer">
-      <label for="faq3" class="flex items-center font-semibold cursor-pointer relative after:absolute after:content-['⁺'] after:right-2 after:text-2xl after:text-[#181c31] hover:after:text-gray-900 peer-checked:after:transform peer-checked:after:content-['-']">
-        <h3 class="text-base">Lorem ipsum dolor sit amet, consectetur</h3>
-      </label>
-      <div class="answer mt-5 h-0 overflow-hidden transition ease-in-out duration-500 peer-checked:h-full  ">
-        <p class="text-sm text-gray-500">We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.</p>
-      </div>
-    </div>
-    </div>
-    
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 
-</div>
-</div>
-</div>
-</section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- //////// Testimonials //////// -->
-<section class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto wow animate__animated animate__fadeInDown animate__slower">
-  
-  <!-- Top -->
-<div class="mx-auto max-w-full px-4 md:px-8 xl:px-0">
-<div class=" mx-auto text-center">
-<div class=" mx-auto text-center" >
-<div class="mb-4 inline-block rounded-full bg-[#EAF0FF] px-4.5 py-1.5 dark:border border-gray-700 dark:bg-black">
-  <span class=" font-medium text-sm text-[#181c31] dark:text-white">TESTIMONIALS</span>
-</div>
-<h2 class="mx-auto mb-4 text-3xl font-bold text-[#181c31] dark:text-white md:w-4/5 xl:w-1/2 ">Client's Testimonials</h2>
-<p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
-</div>
-</div>
-</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- Bottom-slider -->
- <div class="slick-items mt-[75px] mx-[50px]  px-4 md:px-8 xl:mt-20 xl:px-0">
- 
-  <!-- slide 1 -->
-   <div class="px-[20px] max-w-full">
-  <div class="items rounded-lg shadow-sm bg-white mb-[30px] dark:border dark:border-gray-700 dark:bg-black dark:shadow-none
-">
- <div class="items-top flex justify-between py-[38px] border-b border-gray-200 w-[657px] mx-auto border-gray-300
- dark:border-gray-700
- ">
-<div>
-<h3 class="text-[#181c31] font-4.5 leading-1.4 mb-1.5">Devid Smith</h3>
-<p class="text-[#757693] text-[17px] leading-1.4 ">Founter @democompany</p>
-</div>
-<div class="img">
-  <img src="./images/image_1.png" alt="avartar01" width="60px" height="60px">
-</div>
- </div>
- <div class="items-bottom pt-[38px] pb-[45px] w-[657px] mx-auto">
-<p class="text-[#757693] text-[17px] leading-[26px] ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.</p>
- </div>
-  </div>
-  </div>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".slick-items").slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+      });
 
-  <!-- slide 2 -->
-   <div class="px-[20px]">
-    <div class="items rounded-lg shadow-sm  bg-white mb-[30px] dark:border dark:border-gray-700 dark:bg-black
- dark:shadow-none
-">
- <div class="items-top flex justify-between py-[38px] border-b border-gray-200 w-[657px] mx-auto border-gray-300
- dark:border-gray-700
- ">
-<div>
-<h3 class="text-[#181c31] font-4.5 leading-1.4 mb-1.5">Jhon Abraham</h3>
-<p class="text-[#757693] text-[17px] leading-1.4 ">Founter @democompany</p>
-</div>
-<div class="img">
-  <img src="./images/image_1.png" alt="avartar01" width="60px" height="60px">
-</div>
- </div>
- <div class="items-bottom pt-[38px] pb-[45px] w-[657px] mx-auto">
-<p class="text-[#757693] text-[17px] leading-[26px] ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.</p>
- </div>
+      
+    });
+  </script>
 
-  </div>
-  </div>
+  <script src="./WOW-master/WOW-master/dist/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 
- 
-<!-- slide 3 -->
-  <div class="px-[20px]">
-  <div class="items rounded-lg shadow-sm bg-white mb-[30px] dark:border dark:border-gray-700 dark:bg-black dark:shadow-none
-">
- <div class="items-top flex justify-between py-[38px] border-b border-gray-200 w-[657px] mx-auto border-gray-300
- dark:border-gray-700
- ">
-<div>
-<h3 class="text-[#181c31] font-4.5 leading-1.4 mb-1.5">Devid Smith</h3>
-<p class="text-[#757693] text-[17px] leading-1.4 ">Founter @democompany</p>
-</div>
-<div class="img">
-  <img src="./images/image_1.png" alt="avartar01" width="60px" height="60px">
-</div>
- </div>
- <div class="items-bottom pt-[38px] pb-[45px] w-[657px] mx-auto">
-<p class="text-[#757693] text-[17px] leading-[26px] ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.</p>
- </div>
-  </div>
-  </div>
-</div>
-</section>
-
-<!-- //////// Pricing //////// -->
-<section class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto max-w-full overflow-hidden pb-20 pt-15 lg:pb-25 xl:pb-30 wow animate__animated animate__fadeInDown animate__slower">
-<div class="mx-auto max-w-full px-4 md:px-8 xl:px-0">
-<div class=" mx-auto text-center">
-<div class=" mx-auto text-center">
-<div class="mb-4 inline-block rounded-full bg-[#EAF0FF] px-4.5 py-1.5 dark:border dark:border-gray-700 dark:bg-black
-">
-  <span class="text-sm text-[#181c31] font-medium dark:text-white">PRICING PLANS</span>
-</div>
-<h2 class="mx-auto mb-4 text-3xl font-bold text-[#181c31] dark:text-white md:w-4/5 xl:w-1/2">Simple Pricing</h2>
-<p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
-</div>
-</div>
-</div>
-<div class="relative mx-auto mt-15 max-w-[1207px] px-4 md:px-8 xl:mt-20 xl:px-0">
- <div class="absolute -bottom-50 -z-1 h-full w-full">
-  <img alt="Dotlight" class="dark-block dark:hidden" src="./images/shape-dotted-light.svg" />
-</div>
- <div class="flex justify-center gap-7.5 sm:flex-wrap lg:flex-nowrap xl:gap-12.5">
-  <div class="group relative rounded-lg border-gray-300
- bg-white p-7.5 shadow-lg
- dark:border-gray-700 dark:bg-black
- dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-<h3 class="mb-7.5 text-3xl font-bold text-[#181c31] dark:text-white">$ 100<span class="text-xs text-[#7F8699] dark:text-[#8D94A1]
-">/month</span></h3>
-<h4 class="mb-2.5 text-base font-medium text-[#181c31] dark:text-white">Small Pack</h4>
-<p class="text-[#7F8699] text-sm">Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
-<div class="mt-9 border-t border-t-gray-300 border-gray-300
- pb-12.5 pt-9 dark:border-gray-700">
- <ul>
-  <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">300 GB Storage</li>
-  <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">Unlimited Photos and Videos</li>
-  <li class="mb-4 text-sm text-[#181c31] opacity-40 last:mb-0 dark:text-[#8D94A1]">Exclusive Support</li>
-  <li class="mb-4 text-sm text-[#181c31] opacity-40 last:mb-0 dark:text-[#8D94A1]">Custom Branding Strategy</li>
- </ul>
-</div>
-<button class="group/btn cursor-pointer inline-flex items-center gap-2.5 font-medium text-indigo-600 transition-all duration-300 dark:text-white dark:hover:text-indigo-600">
-  <span class="duration-300 group-hover/btn:pr-2"> Get the Plan</span><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" fill="currentColor"></path>
- </svg></button>
-  </div>
-  <div class="group relative rounded-lg border-gray-300
- bg-white p-7.5 shadow-lg
- dark:stroke dark dark:bg-black
- dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-<div class="absolute -right-2 top-6 bg-blue-500 text-white text-[12px] font-semibold
- px-4 py-2 -rotate-90 rounded-l-full tracking-wide">POPULAR</div>
-<h3 class="mb-7.5 text-3xl font-bold text-[#181c31] dark:text-white xl:text-sectiontitle3">$ 200<span class="text-xs text-[#7F8699]
- dark:text-[#8D94A1]">/month</span></h3>
-<h4 class="mb-2.5 text-base
- font-medium text-[#181c31] dark:text-white">Medium Pack</h4>
-<p class="text-[#7F8699] text-sm">Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
-<div class="mt-9 border-t border-t-gray-300 border-gray-300
- pb-12.5 pt-9 dark:border-gray-700">
- <ul>
-  <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">300 GB Storage</li>
-  <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">Unlimited Photos and Videos</li>
-  <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">Exclusive Support</li>
-  <li class="mb-4 text-sm text-[#181c31] opacity-40 last:mb-0 dark:text-[#8D94A1]
-">Custom Branding Strategy</li>
- </ul>
-</div>
-<button class="group/btn cursor-pointer inline-flex items-center gap-2.5 font-medium text-indigo-600
- transition-all duration-300 dark:text-white dark:hover:text-indigo-600
-"><span class="duration-300 group-hover/btn:pr-2"> Get the Plan</span><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" fill="currentColor"></path>
- </svg>
-</button>
-  </div>
-  <div class="group relative rounded-lg border-gray-300
- bg-white p-7.5 shadow-lg dark:border-gray-700 dark:bg-black
- dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-<h3 class="mb-7.5 text-3xl font-bold text-[#181c31] dark:text-white xl:text-sectiontitle3">$ 300<span class="text-xs text-[#7F8699]
- dark:text-[#8D94A1]
-">/month</span></h3>
-<h4 class="mb-2.5 text-base
- font-medium text-[#181c31] dark:text-white">Large Pack</h4>
-<p class="text-[#7F8699] text-sm">Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
-<div class="mt-9 border-t border-t-gray-300 border-gray-300
- pb-12.5 pt-9 dark:border-gray-700">
- <ul>
-  <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">300 GB Storage</li>
-  <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1]">Unlimited Photos and Videos</li>
-  <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1] ">Exclusive Support</li>
-  <li class="mb-4 text-sm text-[#181c31] last:mb-0 dark:text-[#8D94A1] ">Custom Branding Strategy</li>
- </ul>
-</div>
-<button class="group/btn cursor-pointer inline-flex items-center gap-2.5 font-medium text-indigo-600 transition-all duration-300 dark:text-white dark:hover:text-indigo-600">
-  <span class="duration-300 group-hover/btn:pr-2"> Get the Plan</span><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" fill="currentColor"></path>
- </svg></button>
-  </div>
- </div>
-</div>
-</section>
-
-<!-- //////// Contact Form ///////// -->
-<section class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto px-4 md:px-8 2xl:px-0">
-<div class="relative mx-auto max-w-full px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
-<div class="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-[#fff] to-[#dee7ff47] dark:bg-gradient-to-t dark:from-transparent dark:to-[#24283E]">
-</div>
-<div class="absolute bottom-[-255px] left-0 -z-1 h-full w-full">
-<img alt="Dotted"  class="dark-block dark:hidden" src="./images/shape-dotted-light.svg">
-<img alt="Dotted"  class="dark-block hidden dark:block" src="./images/shape-dotted-dark.svg">
-</div>
-<div class="flex flex-col-reverse gap-8 md:flex-row md:flex-nowrap justify-between xl:gap-20">
-<div class="rounded-lg w-full bg-white p-7.5 shadow-lg dark:border dark:border-gray-700 dark:bg-black">
-<h2 class="mb-15 text-5xl font-semibold text-[#181c31] dark:text-white xl:text-4xl">Send a message</h2>
-<form action="">
-<div class="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
-<input placeholder="Full name" class="text-sm w-full border-b border-gray-300 bg-transparent pb-3.5 focus:border-gray-500 focus:placeholder:text-black focus-visible:outline-none dark:border-gray-500 dark:focus:border-[#8E9196] dark:focus:placeholder:text-white lg:w-1/2" type="text">
-<input placeholder="Email address" class="text-sm w-full border-b border-gray-300 bg-transparent pb-3.5 focus:border-gray-500 focus:placeholder:text-black focus-visible:outline-none dark:border-gray-500 dark:focus:border-[#8E9196] dark:focus:placeholder:text-white lg:w-1/2" type="email">
-</div>
-<div class="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
-<input placeholder="Subject" class="text-sm w-full border-b border-gray-300 bg-transparent pb-3.5 focus:border-gray-500 focus:placeholder:text-black focus-visible:outline-none dark:border-gray-500 dark:focus:border-[#8E9196] dark:focus:placeholder:text-white lg:w-1/2" type="text">
-<input placeholder="Phone number" class="text-sm w-full border-b border-gray-300 bg-transparent pb-3.5 focus:border-gray-500 focus:placeholder:text-black focus-visible:outline-none dark:border-gray-500 dark:focus:border-[#8E9196] dark:focus:placeholder:text-white lg:w-1/2" type="text">
-</div>
-<div class="mb-11.5 flex">
-<textarea placeholder="Message" rows="4" class="text-sm w-full border-b border-gray-300 bg-transparent focus:border-gray-500 focus:placeholder:text-black focus-visible:outline-none dark:border-gray-500 dark:focus:border-[#8E9196] dark:focus:placeholder:text-white">
-</textarea>
-</div>
-<div class="flex xl:flex-wrap gap-4 justify-between xl:justify-between ">
-<div class="mb-4 flex md:mb-0">
-<label for="default-checkbox" class="flex max-w-[425px] cursor-pointer select-none text-sm text-[#7F8699]">
-<input id="default-checkbox" class="peer sr-only" type="checkbox">
-<span class="group mt-2 mr-2 flex h-5 min-w-[20px] items-center justify-center rounded border-gray-300 bg-gray-100 text-blue-600 peer-checked:bg-indigo-700 dark:border-gray-600 dark:bg-gray-700">
-<svg class="opacity-0 peer-checked:group-[]:opacity-100" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M9.70704 0.792787C9.89451 0.980314 9.99983 1.23462 9.99983 1.49979C9.99983 1.76495 9.89451 2.01926 9.70704 2.20679L4.70704 7.20679C4.51951 7.39426 4.26521 7.49957 4.00004 7.49957C3.73488 7.49957 3.48057 7.39426 3.29304 7.20679L0.293041 4.20679C0.110883 4.01818 0.0100885 3.76558 0.0123669 3.50339C0.0146453 3.24119 0.119814 2.99038 0.305222 2.80497C0.490631 2.61956 0.741443 2.51439 1.00364 2.51211C1.26584 2.50983 1.51844 2.61063 1.70704 2.79279L4.00004 5.08579L8.29304 0.792787C8.48057 0.605316 8.73488 0.5 9.00004 0.5C9.26521 0.5 9.51951 0.605316 9.70704 0.792787Z" fill="white">
-</path>
-</svg>
-</span class=" ">By clicking Checkbox, you agree to use our “Form” terms And consent cookie usage in browser.</label>
-</div>
-<button  class="inline-flex items-center gap-2.5 rounded-full bg-black px-4 py-3 font-medium text-white duration-300 ease-in-out hover:bg-[#0F0F11] dark:bg-btndark">Send Message<svg class="fill-white" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z" fill="">
-</path>
-</svg>
-</button>
-</div>
-</form>
-</div>
-<div class=" w-full md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15" >
-<h3 class="mb-12.5 text-5xl font-semibold text-black dark:text-white xl:text-4xl">Find us</h3>
-<div class="5 mb-7">
-<h4 class="mb-4 text-base font-medium text-black dark:text-white">Our Loaction</h4>
-<p class="text-gray-600 text-sm">290 Maryam Springs 260, Courbevoie, Paris, France</p>
-</div>
-<div class="5 mb-7">
-<h4 class="mb-4 text-base font-medium text-black dark:text-white">Email Address</h4>
-<p><a class="text-gray-600 text-sm" href="#">yourmail@domainname.com</a></p>
-</div>
-<div>
-    <h4 class="mb-4 text-base font-medium text-black dark:text-white">Phone Number</h4>
-    <p><a class="text-gray-600 text-sm" href="#">+009 42334 6343 843</a></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-
-<!-- ////////// Blog&News ///////// -->
- <section class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto py-20 lg:py-25 xl:py-30 wow animate__animated animate__fadeInDown animate__slower">
-<div class="mx-auto max-w-full px-4 md:px-8 xl:px-0">
-<div class=" mx-auto text-center">
-<div class=" mx-auto text-center">
-<div class="mb-4 inline-block rounded-full bg-[#EAF0FF] bg-[#E2E8F0] px-4.5 py-1.5 dark:border dark:border-gray-700 dark:bg-black
-">
-  <span class="text-sm font-medium text-[#181c31] dark:text-white">NEWS BLOGS</span>
-</div>
-<h2 class="mx-auto mb-4 text-3xl font-bold text-[#181c31] dark:text-white md:w-4/5 xl:w-1/2 xl:text-xl">Latest News Blogs</h2>
-<p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
-</div>
-</div>
-</div>
-<div class="mx-auto mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0 w-[92%]">
-<div class="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-<div class="group rounded-lg bg-white p-4 pb-9 shadow-sm dark:bg-black
-"><a class="relative block aspect-[368/239] overflow-hidden rounded-lg" href="#!">
-  <img alt="Exploring MERN Stack: Powering Modern Web Development" class="duration-300 group-hover:scale-110
-" src="./images/image_25.png" sizes="100vw"></a>
-<div class="px-4">
-<h3 class="mb-3.5 mt-7.5 line-clamp-2 text-lg font-medium text-[#181c31] hover:text-indigo-600 dark:text-white dark:hover:text-indigo-600 xl:text-itemtitle2"><a href="#!">Exploring MERN Stack: Powering Modern We...</a></h3>
-<p class="line-clamp-3 text-[#7F8699]">In the world of web development, staying ahead of the curve is crucial. One technology stack that ha</p>
-</div>
-</div>
-<div class="group rounded-lg bg-white p-4 pb-9 shadow-sm dark:bg-black
-" >
-  <a class="relative block aspect-[368/239] overflow-hidden rounded-lg" href="/blog/best-ui-components-for-modern-websites">
-  <img alt="Best UI components for modern website" class="duration-300 group-hover:scale-110 w-[640px] h-[427px]" src="./images/image_29.png" sizes="100vw" ></a>
-<div class="px-4">
-<h3 class="mb-3.5 mt-7.5 line-clamp-2 text-lg font-medium text-[#181c31] hover:text-indigo-600 dark:text-white dark:hover:text-indigo-600 xl:text-itemtitle2"><a href="#!">Best UI components for modern website...</a></h3>
-<p class="line-clamp-3 text-[#7F8699]">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</p>
-</div>
-</div>
-<div class="group rounded-lg bg-white p-4 pb-9 shadow-sm dark:bg-black
-" ><a class="relative block aspect-[368/239] overflow-hidden rounded-lg" href="#!">
-  <img alt="The Power of UI/UX: Elevating Digital Experiences"  class="duration-300 group-hover:scale-110 w-[640px] h-[427px]
-" src="./images/image_31.png" sizes="100vw"></a>
-<div class="px-4">
-<h3 class="mb-3.5 mt-7.5 line-clamp-2 text-lg font-medium text-[#181c31] hover:text-indigo-600 dark:text-white dark:hover:text-indigo-600 xl:text-itemtitle2"><a href="#!">The Power of UI/UX: Elevating Digital Ex...</a></h3>
-<p class="line-clamp-3 text-[#7F8699]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-    </main>
-
-<!-- ///////// Footer /////// -->
- <footer class="mx-auto sm:mx-auto md:mx-auto lg:mx-auto border-t border-t-gray-300 border-gray-300
- bg-white dark:border-gray-700 dark:bg-black
- wow animate__animated animate__slideInDown">
-<div class="mx-auto max-w-full px-4 md:px-8 2xl:px-0">
-<div class="py-20 lg:py-25">
-<div class="flex gap-8 lg:justify-between xl:flex-nowrap lg:gap-0 ">
-<div class="w-1/2 lg:w-1/4" ><a href="#!" class="relative">
-  <img alt="Logo" width="110" height="80" class="dark:hidden" src="./images/logo-light.svg" />
-  <img alt="Logo"  width="110" height="80"  class="hidden dark:block"  src="./images/logo-dark.svg" />
-</a>
-<p class="mb-10 mt-5 text-sm text-[#757693]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<p class="mb-1.5 text-[#757693] text-sm tracking-[5px]">CONTACT</p><a href="#" class="text-lg font-medium text-gray dark:text-white">hello@solid.com</a>
-</div>
-<div class="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
-<div class="" 
->
-<h4 class="mb-9 text-base font-medium text-[#181c31] dark:text-white">Quick Links</h4>
-<ul>
-<li><a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Home</a></li>
-<li><a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Product</a></li>
-<li><a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Careers</a></li>
-<li><a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Pricing</a></li>
-</ul>
-</div>
-<div class="" 
->
-<h4 class="mb-9 text-base font-medium text-[#181c31] dark:text-white">Support</h4>
-<ul>
-<li><a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Company</a></li>
-<li><a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Press media</a></li>
-<li><a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Our Blog</a></li>
-<li><a href="#" class="mb-3 text-sm text-[#757693] inline-block hover:text-indigo-500">Contact Us</a></li>
-</ul>
-</div>
-<div class="" 
->
-<h4 class="mb-9 text-base font-medium text-[#181c31] dark:text-white">Newsletter</h4>
-<p class="mb-4 w-[90%] text-[#757693]">Subscribe to receive future updates</p>
-<form>
-<div class="relative">
-  <input type="email" placeholder="Email address" required="" class="w-full text-sm rounded-full border border-gray-300
- px-6 py-3 shadow-sm focus:border-indigo-500 focus:outline-none dark:border-gray-700 dark:bg-black dark:shadow-none dark:focus:border-text-indigo-500
-" value="" />
-  <button class="absolute right-4 -top-1 p-4">
-    <i class="fa-solid fa-forward-fast text-[#757693] hover:text-indigo-500 dark:text-white "></i>
-</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-<div class="flex flex-col flex-wrap items-center justify-between border-t border-t-gray-300 border-gray-300
- py-7 dark:border-gray-700 lg:flex-row lg:justify-center lg:gap-0">
-<div class="">
-<ul class="flex items-center gap-8">
-<li><a href="#" class="text-sm text-[#757693] hover:text-indigo-500">English</a></li>
-<li><a href="#" class="text-sm text-[#757693] hover:text-indigo-500">Privacy Policy</a></li>
-<li><a href="#" class="text-sm text-[#757693] hover:text-indigo-500">Support</a></li>
-</ul>
-</div>
-<div class="" 
->
-<p class="text-[#757693] text-sm">© 2025 Solid. All rights reserved</p>
-</div>
-<div class="">
-<ul class="flex items-center gap-5">
-<li>
-  <a href="#">
-    <i class="fa-brands fa-facebook-f text-[#757693] transition-all duration-300 hover:text-indigo-500
-"></i>
-</a>
-</li>
-<li><a href="#" >
- <i class="fa-brands fa-twitter text-[#757693] transition-all duration-300 hover:text-indigo-500"></i>
-</a>
-</li>
-<li><a href="#">
-  <i class="fa-brands fa-linkedin-in text-[#757693] transition-all duration-300 hover:text-indigo-500"></i>
-</a>
-</li>
-<li><a href="#">
-  <i class="fa-brands fa-behance text-[#757693] transition-all duration-300 hover:text-indigo-500"></i>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</footer>
-
-
-<!-- Back to top -->
- <a href="#" class="back-to-top cd-top text-replace js-cd-top ">
-
-<i class="fa-solid fa-chevron-up"></i>
- </a>
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
-
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<script type="text/javascript">
- $(document).ready(function(){
-$('.slick-items').slick({
-  autoplay: true,
-  autoplaySpeed: 3000,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  dots:true,
-  arrows:false,
-});
-});
- </script>
-
- <script src="./WOW-master/WOW-master/dist/wow.min.js"></script>
-<script>
-              new WOW().init();
-              </script>
-
-<script src="./back-to-top-master/back-to-top-master/assets/js/main.js"></script>
-<script src="./back-to-top-master/back-to-top-master/assets/js/util.js"></script>
-
-
+  <script src="./back-to-top-master/back-to-top-master/assets/js/main.js"></script>
+  <script src="./back-to-top-master/back-to-top-master/assets/js/util.js"></script>
 </body>
 
 </html>
